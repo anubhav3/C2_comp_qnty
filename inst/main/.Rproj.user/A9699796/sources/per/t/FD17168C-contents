@@ -1,0 +1,51 @@
+library(R.utils)
+library(tictoc)
+
+## Loading required libraries
+library(ggpubr); library(plotrix); library(ggplot2)
+library(cowplot); library(latex2exp); library(HDInterval)
+library(doParallel); library(foreach); library(raster)
+
+## Start of computation time
+tic("Time elapsed:")
+
+## Relative path from the project directory
+sourceDirectory("../ADBM", modifiedOnly=FALSE)
+sourceDirectory("../method", modifiedOnly=FALSE)
+sourceDirectory("../analysis_tools", modifiedOnly=FALSE)
+sourceDirectory("../data", modifiedOnly=FALSE)
+source("rejection.R")
+
+
+web.to.analyse <- "Benguela Pelagic"
+foodweb_data <- load(paste("../data/", web.to.analyse, ".web.Rdata", sep=""))
+all.web.info <- get(foodweb_data)
+
+model = ratio.power
+model_core_par = ADBM_core_par(all.web.info)
+model_prior_par = ADBM_prior_par()
+input_par = input_parameters()
+dist_ss = dist_connectance
+desc = "connectance"
+
+## Creating a directory where all the results will be stored
+dir_N <- input_par$N 
+dir_tol <- input_par$tol
+ss_type <- as.character(substitute(dist_ss))
+dirnam <- paste(c("../results/",web.to.analyse,"/",'N=', dir_N, '_tol=', dir_tol,"_", desc), collapse = '')
+dir.create(dirnam)
+
+## Running the rejection algorithm
+abclike.RH.web <- rejection(all.web.info = all.web.info, model = model, model_core_par = model_core_par,
+                            model_prior_par=model_prior_par, input_parameters=input_par, dist_ss = dist_ss)
+
+save(abclike.RH.web, file = paste(c(dirnam,"/",web.to.analyse,".Rdata"), collapse = ''))
+
+
+
+## Plotting the real and predicted food web matrix alongwith some food web properties
+plot_foodweb(real_foodweb = all.web.info, predicted_foodweb = abclike.RH.web,
+             dirnam = dirnam, model_core_par = model_core_par, model = model,
+             desc=desc)
+toc()
+print(paste("Proportion of accepted simulations =", round(dir_N/abclike.RH.web$total_sim,3)))

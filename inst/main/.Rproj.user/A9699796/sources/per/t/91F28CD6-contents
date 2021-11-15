@@ -1,0 +1,7 @@
+## Other parameters
+input_parameters <- function(){
+  input_parameters <- data.frame(tol = 0.01,
+                                 N = 1000,
+                                 n_cores = 5)
+}
+

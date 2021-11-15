@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569331263202.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3246607591",
+    "id" : "ED2A618E",
+    "lastKnownWriteTime" : 1569331412,
+    "last_content_update" : 1569331412123,
+    "path" : "~/Google Drive/GitHub/Chapter1/method/dist_ACC.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "7,19",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

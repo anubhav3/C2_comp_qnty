@@ -1,0 +1,96 @@
+for (foodweb in c("Benguela Pelagic"))
+{
+  
+  ## fit the parameters
+  # rej_par <- data.frame(N = N, tol = tol, n_cores = n_cores)
+  abclike.RH.web <- rejection(all.web.info = all.web.info, model = ratio.power, model_core_par = ADBM_core_par(all.web.info),
+                              model_prior_par=ADBM_prior_par(),input_parameters=input_parameters(),dist_ss = dist_connectance)
+  # save(abclike.RH.web, file = paste(c(dirnam,"/",foodweb,".Rdata"),collapse = ''))
+  
+  # other <- data.frame(e=e, n=n, ni=ni, r.a=r.a)
+  # prop_web <- fw_prop(abclike.RH.web, other, all.web.info)
+  # real <- real_prop(all.web.info)
+  # prop <- prop_web$prop
+  # best.web <- prop_web$web
+  # prop.0.corr <- prop$prop.0.corr
+  # prop.1.corr <- prop$prop.1.corr
+  # 
+  # ## Plotting the structural properties of food web
+  # s1 <- plot_prop(prop$prop_basal, "Proportion basal", real$prop_basal)
+  # s2 <- plot_prop(prop$prop_inter, "Proportion intermediate", real$prop_inter)
+  # s3 <- plot_prop(prop$prop_top, "Proportion top", real$prop_top)
+  # s4 <- plot_prop(prop$prop_herb, "Proportion herbivores", real$prop_herb)
+  # s5 <- plot_prop(prop$mean_trop_lvl, "Mean trophic level", real$mean_trop_lvl)
+  # s6 <- plot_prop(prop$max_trop_lvl, "Max trophic level", real$max_trop_lvl)
+  # s7 <- plot_prop(prop$mean_omn, "Mean omnivory", real$mean_omn)
+  # s8 <- plot_prop(prop$sd_gen, "Standard deviation of generalism", real$sd_gen)
+  # s9 <- plot_prop(prop$sd_vulner, "Standard deviation of vulnerability", real$sd_vulner)
+  # s10 <- plot_prop(prop$diet_sim, "Diet similarity", real$diet_sim)
+  # s11 <- plot_prop(prop$mean_path_lt, "Mean path length", real$mean_path_lt)
+  # 
+  # figure <- ggarrange(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11, nrow = 6, ncol=2)
+  # name <-  paste(c(web.to.analyse,'_properties.pdf'),collapse = '')
+  # annotate_figure(figure, top = "str_prop_confusion_matrix_uninf_prior")
+  # ggsave(filename = name, width=9, height=12)
+  # 
+  # ##Web connectivity
+  # conn.real.web = format(round(sum(all.web.info$predation.matrix)/dim(all.web.info$predation.matrix)[1]^2, 2), nsmall = 2)
+  # model.real.web = format(round(sum(abclike.RH.web$web)/dim(all.web.info$predation.matrix)[1]^2, 2), nsmall = 2)
+  # 
+  # 
+  # pdf(paste(c(web.to.analyse,'_matrix.pdf'),collapse = ''),width=18,height=6)
+  # par(mfrow=c(1,3))
+  # 
+  # ##Plot the real food webs
+  # Plot.matrix(all.web.info$predation.matrix,title=paste("C",conn.real.web,sep="="))
+  # 
+  # ## Plot the fitted food web matrix
+  # Plot.matrix_uncertainty(best.web,title = "Predicted food web_conf_uninfprior")
+  # # name_mat = paste(c(web.to.analyse,'_matrix.pdf'),collapse = '')
+  # # dev.copy2pdf(file = name_mat,width=8,height=11)
+  # dev.off()
+  # 
+  # ## Plotting the parameter distribution
+  # p1 <- plott((abclike.RH.web$post_dists)$ai,"a_i")
+  # p2 <- plott((abclike.RH.web$post_dists)$aj, "a_j")
+  # p3 <- plott((abclike.RH.web$post_dists)$a, "a")
+  # p4 <- plott((abclike.RH.web$post_dists)$r.b, "r.b")
+  # 
+  # name = paste(c(web.to.analyse,'_distribution.pdf'),collapse = '')
+  # figure <- ggarrange(p1,p2,p3,p4)
+  # annotate_figure(figure, top = "ss = confusion_matrix_uninf_prior")
+  # ggsave(filename = name,width=8,height=8)
+  # 
+  # print(paste(foodweb,"done!"))
+  # save(abclike.RH.web, file = paste(c(foodweb,".Rdata"),collapse = ''))
+}
+
+
+
+
+
+toc()
+# print(paste("Proportion of accepted simulations =", round(N/abclike.RH.web$total_sim,3)))
+# 
+# pdf(paste(c(web.to.analyse,'_1_0_corr.pdf'),collapse = ''),width=6,height=6)
+# plot(prop.0.corr, prop.1.corr, main = "ss = confusion_matrix_prior = uninf")
+# dev.off()
+# 
+# ## Plotting distribution of accuracy using confusion matrix
+# pdf(paste("accuracy_conf_uninfprior.pdf"),width=9,height=12)
+# par(mfrow=c(4,1))
+# hist(abclike.RH.web$acc_ss, breaks = 50, main = "accuracy_ss = confusion_matrix_prior = uninf", xlab = "confusion matrix")
+# hist(abclike.RH.web$dummy, breaks = 50, main = "connectance", xlab = "connectance")
+# hist(prop.0.corr, breaks = 50)
+# hist(prop.1.corr, breaks = 50)
+# dev.off()
+# 
+# ## Plotting pairwise plot
+# pdf(paste("pairwise_conf_uninfprior.pdf"),width=12,height=12)
+# pairs(abclike.RH.web$post_dists)
+# dev.off()
+# 
+# ## Plot confusion matrix ss vs connectance
+# pdf(paste("conf_vs_conn_uninfprior.pdf"),width=6,height=6)
+# plot(abclike.RH.web$dummy, abclike.RH.web$acc_ss, xlab = "connectance", ylab = "confusion matrix")
+# dev.off()

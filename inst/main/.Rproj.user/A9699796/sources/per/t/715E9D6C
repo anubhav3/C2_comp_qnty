@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569329061445.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "819844908",
+    "id" : "715E9D6C",
+    "lastKnownWriteTime" : 1569329078,
+    "last_content_update" : 1569329078956,
+    "path" : "~/Google Drive/GitHub/Chapter1/ADBM/ratio.power.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "14,12",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

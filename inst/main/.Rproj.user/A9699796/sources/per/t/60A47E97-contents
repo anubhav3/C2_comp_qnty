@@ -1,0 +1,21 @@
+## Some input parameters for ADBM
+ADBM_core_par <- function(foodweb = foodweb){
+  real.web = foodweb$predation.matrix
+  S = dim(real.web)[1]
+  ADBM_core_par <- list(e = 1,
+                        n = 1,
+                        ni = -3/4,
+                        r.a = 1,
+                        M = foodweb$species.sizes,
+                        real.web = foodweb$predation.matrix,
+                        S = S)
+}
+
+ADBM_prior_par <- function(){
+  ADBM_prior_par <- data.frame(l_a <- 0, r_a <- 10,
+                               l_ai <- -1, r_ai <- 1,
+                               l_aj <- -1, r_aj <- 1,
+                               l_r.b <- -10, r_r.b <- 5,
+                               a.shape <- 0.4, a.scale <- 0.05,
+                               r.b.shape <- 0.5, r.b.scale <- 2.0)
+}

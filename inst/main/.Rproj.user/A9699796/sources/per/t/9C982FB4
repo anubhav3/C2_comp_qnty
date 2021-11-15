@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569326441952.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1823260600",
+    "id" : "9C982FB4",
+    "lastKnownWriteTime" : 1569508603,
+    "last_content_update" : 1569508603268,
+    "path" : "~/Google Drive/GitHub/Chapter1/rejection/rejection.R",
+    "project_path" : "rejection.R",
+    "properties" : {
+        "cursorPosition" : "0,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

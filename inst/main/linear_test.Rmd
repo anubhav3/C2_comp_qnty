@@ -1,0 +1,47 @@
+---
+title: "linear_test"
+author: "Anubhav Gupta"
+date: "16/12/2020"
+output: html_document
+---
+
+```{r message=FALSE}
+
+library(dplyr)
+library(ggplot2)
+
+
+set.seed(123)
+m <- 4
+c <- 5
+npoints <- 3001
+x <- seq(0, 300, length.out = npoints)
+epsilon <- rnorm(npoints, mean = 0, sd = 50)
+y <- m * x + c + epsilon
+
+dd_raw <- data.frame(x = x, y = y)
+ggplot(dd_raw) +
+  geom_point(aes(x = x, y = y)) +
+  geom_vline(xintercept = c(100, 200), color = "red")
+
+dd_lower <- dd_raw %>%
+  filter(x <= 100)
+
+dd_mid <- dd_raw %>%
+  filter(x >= 100 & x <= 200)
+
+dd_upper <- dd_raw %>%
+  filter(x >= 200 & x <= 300)
+
+lm_all <- lm(y ~ x, data = dd_raw)
+lm_lower <- lm(y ~ x, data = dd_lower)
+lm_mid <- lm(y ~ x, data = dd_mid)
+lm_upper <- lm(y ~ x, data = dd_upper)
+
+summary(lm_all)
+summary(lm_lower)
+summary(lm_mid)
+summary(lm_upper)
+```
+
+We observe that the standard error in the estimation of intercept increases. The standard error in the slope remains approximately equal for the three ranges (lower, mid and upper) of x values.

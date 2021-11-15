@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569484162892.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1317450507",
+    "id" : "FD17168C",
+    "lastKnownWriteTime" : 1569510191,
+    "last_content_update" : 1569510191451,
+    "path" : "~/Google Drive/GitHub/Chapter1/rejection/final.R",
+    "project_path" : "final.R",
+    "properties" : {
+        "cursorPosition" : "9,20",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,31 @@
+---
+title: "Untitled"
+header-includes:
+   - \usepackage{lineno}
+   - \linenumbers
+description: |
+  A new article created using the Radix format.
+author:
+  - name: Nora Jones 
+    url: https://example.com/norajones
+    affiliation: Spacely Sprockets
+    affiliation_url: https://example.com/spacelysprokets
+date: "`r Sys.Date()`"
+output: radix::radix_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Radix is a publication format for scientific and technical writing, native to the web. 
+
+Learn more about using Radix at <https://rstudio.github.io/radix>.
+
+
+```{r fig_r0, echo=FALSE, fig.align='center', out.width="500px", results='asis', fig.cap="\\label{fig:fig_r0} True skill statistics between predicted food web and observed food web for simulated small reef food web estimated for different number of predator species' guts sampled. For every value in the horizontal axis, there are 100 samples of randomly chosen species from a set of 50 species whose gut content data are simulated."}
+knitr::include_graphics("../report/fig/fig_1/fig_2/sim Small Reef/TSS_with_n_pred_prop.png")
+```
+
+
+

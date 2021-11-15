@@ -1,0 +1,6 @@
+dist_connectance <- function(ss_sim=ss_sim, ss_real=ss_real){
+  S <- dim(ss_real)[1]
+  ss_sim <- sum(ss_sim)/(S^2)
+  ss_real <- sum(ss_real)/(S^2)
+  dist_connectance <- abs(ss_sim-ss_real)
+}

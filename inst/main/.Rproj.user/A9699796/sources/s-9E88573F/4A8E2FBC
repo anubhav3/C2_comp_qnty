@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569502537749.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4A8E2FBC",
+    "lastKnownWriteTime" : 1569507082,
+    "last_content_update" : 1569507082173,
+    "path" : "~/Google Drive/GitHub/Chapter1/analysis_tools/foodweb_prop.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "156,25",
+        "scrollLine" : "124"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

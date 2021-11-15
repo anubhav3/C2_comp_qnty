@@ -1,0 +1,15 @@
+## Function defined to plot parameter distribution
+plott <- function(xval, labell)
+{
+  if(labell == "a") {xval = log(xval); xi <- min(xval); xf <- max(xval); labell = "log(a)"; xpr <- log(rweibull(100000, shape = a.shape, scale = a.scale))}
+  else if (labell == "a_i") {xi <- l_ai; xf <- r_ai; xpr <- runif(100000,l_ai, r_ai)}
+  else if (labell == "a_j") {xi <- l_aj; xf <- r_aj; xpr <- runif(100000,l_aj, r_aj)}
+  else if (labell == "r.b") {xval = log(xval); xi <- min(xval); xf <- max(xval); labell = "log(r.b)"; xpr <- log(rweibull(100000, shape = r.b.shape, scale = r.b.scale))}
+  df <- data.frame(xval = xval, xpr=xpr)
+  plott <- ggplot(df, aes(x=xval, y = ..density..)) +
+    geom_histogram(bins = 30) +
+    geom_density(color="red") +
+    geom_density(mapping = aes(x = xpr, y = ..density.. ), color = "green") +
+    xlab(TeX(labell)) +
+    xlim(c(xi,xf)) 
+}

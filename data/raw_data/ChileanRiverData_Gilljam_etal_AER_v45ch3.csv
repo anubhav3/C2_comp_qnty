@@ -1,0 +1,483 @@
+###=============================================================================================
+# Coilaco-, Guampoe & Trancura river individual predation event data,
+# used in the Gilljam et al AER v.45 chapter.
+# 
+# CSV-format:
+# [Predator ID] [Predator Unique ID] [Predator mass] [Prey ID] [Prey mass] [Locality] [Season]
+#
+# Note that individual predators can have several prey, ie be represented on several rows,
+# having the same Predator Unique ID.
+#
+# Some predation events lacked data about prey in the original data set. These events are removed.
+#
+# Data originally from 	David Figueroa
+# Reformatted by		David Gilljam (david.gilljam@liu.se)
+###=============================================================================================
+
+"","predID","predUniqueID","predMass","preyID","preyMass","locality","season"
+"1","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.756001",0.756001,"Copepod (harpacticoideo)",4.2e-05,"Coilaco",NA
+"2","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.088381,"Coilaco",NA
+"3","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Udamocercia sp (Enderlein)",0.135167,"Coilaco",NA
+"4","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Antarctoperla michaelseni (Klapalek)",0.112542,"Coilaco",NA
+"5","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Orthocladius sp2",0.121855,"Coilaco",NA
+"6","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Antarctoperla michaelseni (Klapalek)",0.174541,"Coilaco",NA
+"7","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 1.259382",1.259382,"Eukiefierella sp",0.126807,"Coilaco",NA
+"8","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 28.141613",28.141613,"Eosericostoma sp",0.80848,"Coilaco",NA
+"9","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.225983",0.225983,"Andesiops peruviana (Ulmer)",0.088381,"Coilaco",NA
+"10","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.225983",0.225983,"Thienemaniella sp",0.012519,"Coilaco",NA
+"11","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.225983",0.225983,"Orthocladius sp1",0.000421,"Coilaco",NA
+"12","Kempnyella genuali","Kempnyella genuali 1.784998",1.784998,"Eukiefierella sp",0.007439,"Coilaco",NA
+"13","Kempnyella genuali","Kempnyella genuali 1.784998",1.784998,"Orthocladius sp1",0.000724,"Coilaco",NA
+"14","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.051793",0.051793,"Eukiefierella sp",1.7e-05,"Coilaco",NA
+"15","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.48218",0.48218,"Smicridea chilensis (Navás)",0.019793,"Coilaco",NA
+"16","Kempnyella genuali","Kempnyella genuali 0.121474",0.121474,"Orthocladius sp1",3.3e-05,"Coilaco",NA
+"17","Kempnyella genuali","Kempnyella genuali 1.133315",1.133315,"Brachycentridae Gen. Sp",0.142329,"Coilaco",NA
+"18","Kempnyella genuali","Kempnyella genuali 1.133315",1.133315,"Orthocladius sp1",0.169869,"Coilaco",NA
+"19","Kempnyella genuali","Kempnyella genuali 1.133315",1.133315,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.011254,"Coilaco",NA
+"20","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Andesiops peruviana (Ulmer)",0.025474,"Coilaco",NA
+"21","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Penaphlebia sp (Eaton)",0.116733,"Coilaco",NA
+"22","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Orthocladius sp3",0.169869,"Coilaco",NA
+"23","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Orthocladius sp1",0.089492,"Coilaco",NA
+"24","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Orthocladius sp1",0.010676,"Coilaco",NA
+"25","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Andesiops peruviana (Ulmer)",0.229345,"Coilaco",NA
+"26","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Nousia delicata (Navás)",7.623407,"Coilaco",NA
+"27","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 19.781246",19.781246,"Thienemaniella sp",0.213369,"Coilaco",NA
+"28","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.733646",1.733646,"Udamocercia sp (Enderlein)",0.07718,"Coilaco",NA
+"29","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.733646",1.733646,"Orthocladius sp1",0.169869,"Coilaco",NA
+"30","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.159781,"Coilaco",NA
+"31","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.178461",0.178461,"Andesiops peruviana (Ulmer)",0.003438,"Coilaco",NA
+"32","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.082075",0.082075,"Orthocladius sp1",0.002633,"Coilaco",NA
+"33","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Andesiops peruviana (Ulmer)",0.003438,"Coilaco",NA
+"34","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Orthocladius sp1",0.15931,"Coilaco",NA
+"35","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.005637",3.005637,"Orthocladius sp3",0.134216,"Coilaco",NA
+"36","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.005637",3.005637,"Senzilloides panguipulli (Navás)",0.611201,"Coilaco",NA
+"37","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.932944",1.932944,"Orthocladius sp1",0.089492,"Coilaco",NA
+"38","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.037147",1.037147,"Orthocladius sp1",0.332407,"Coilaco",NA
+"39","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.756001",0.756001,"Orthocladius sp1",7.9e-05,"Coilaco",NA
+"40","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.599087",0.599087,"Limnoperla jaffueli (Navás)",3.2e-05,"Coilaco",NA
+"41","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.557152",0.557152,"Andesiops peruviana (Ulmer)",0.36993,"Coilaco",NA
+"42","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.043262",0.043262,"Orthocladius sp1",0.087427,"Coilaco",NA
+"43","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.043262",0.043262,"Thienemaniella sp",0.032596,"Coilaco",NA
+"44","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Orthocladius sp1",0.013944,"Coilaco",NA
+"45","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Thienemaniella sp",0.030796,"Coilaco",NA
+"46","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Orthocladius sp1",0.047543,"Coilaco",NA
+"47","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Andesiops peruviana (Ulmer)",0.026427,"Coilaco",NA
+"48","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Glossomatidae Gen. Sp",0.083427,"Coilaco",NA
+"49","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Orthocladius sp1",0.25989,"Coilaco",NA
+"50","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Orthocladius sp3",0.029153,"Coilaco",NA
+"51","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 26.543515",26.543515,"Eukiefierella sp",0.016764,"Coilaco",NA
+"52","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.48575",0.48575,"Thienemaniella sp",7.3e-05,"Coilaco",NA
+"53","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.48575",0.48575,"Brachycentridae Gen. Sp",0.000737,"Coilaco",NA
+"54","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.105133",0.105133,"Orthocladius sp1",0.001939,"Coilaco",NA
+"55","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.105133",0.105133,"Orthocladius sp1",7.3e-05,"Coilaco",NA
+"56","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.105133",0.105133,"Eukiefierella sp",0.000724,"Coilaco",NA
+"57","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.105133",0.105133,"Udamocercia sp (Enderlein)",0.191468,"Coilaco",NA
+"58","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.179291",0.179291,"Orthocladius sp1",0.041754,"Coilaco",NA
+"59","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.179291",0.179291,"Glossomatidae Gen. Sp",0.000552,"Coilaco",NA
+"60","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.139141",0.139141,"Orthocladius sp1",0.001125,"Coilaco",NA
+"61","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.246579",0.246579,"Oligochaeta",0.108376,"Coilaco",NA
+"62","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.246579",0.246579,"Orthocladius sp1",0.003925,"Coilaco",NA
+"63","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.480398",0.480398,"Tvetenia c.f. calvecens",0.000212,"Coilaco",NA
+"64","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.480398",0.480398,"Massartellopsis sp (Demoulin)",7.6e-05,"Coilaco",NA
+"65","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.279477",0.279477,"Meridialaris diguillina (Demoulin)",0.000171,"Coilaco",NA
+"66","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.364612",0.364612,"Glossomatidae Gen. Sp",1e-06,"Coilaco",NA
+"67","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.081468",0.081468,"Meridialaris diguillina (Demoulin)",0.079071,"Coilaco",NA
+"68","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.899731",0.899731,"Antarctoperla michaelseni (Klapalek)",0.149948,"Coilaco",NA
+"69","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.899731",0.899731,"Thienemaniella sp",0.137617,"Coilaco",NA
+"70","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.899731",0.899731,"Aubertoperla sp (Illies)",0.032818,"Coilaco",NA
+"71","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.899731",0.899731,"Orthocladius sp1",7.9e-05,"Coilaco",NA
+"72","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.425104",0.425104,"Thienemaniella sp",0.021778,"Coilaco",NA
+"73","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.425104",0.425104,"Antarctoperla michaelseni (Klapalek)",0.242281,"Coilaco",NA
+"74","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.425104",0.425104,"Eukiefierella sp",0.092259,"Coilaco",NA
+"75","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.104112",0.104112,"Smicridea chilensis (Navás)",0.043713,"Coilaco",NA
+"76","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.104112",0.104112,"Glossomatidae Gen. Sp",0.00581,"Coilaco",NA
+"77","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.104112",0.104112,"Diamesa sp1",0.010676,"Coilaco",NA
+"78","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.049191",0.049191,"Aubertoperla sp (Illies)",0.019528,"Coilaco",NA
+"79","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.049191",0.049191,"Orthocladius sp1",0.001051,"Coilaco",NA
+"80","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.14341",0.14341,"Aubertoperla sp (Illies)",0.03604,"Coilaco",NA
+"81","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.034525",0.034525,"Meridialaris diguillina (Demoulin)",0.00151,"Coilaco",NA
+"82","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.034525",0.034525,"Antarctoperla michaelseni (Klapalek)",0.121117,"Coilaco",NA
+"83","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.018711",0.018711,"Limnoperla jaffueli (Navás)",0.029504,"Coilaco",NA
+"84","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.324724",0.324724,"Orthocladius sp2",8.3e-05,"Coilaco",NA
+"85","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.260338",0.260338,"Hapsiphlebia anastomosis (Demoulin)",7.6e-05,"Coilaco",NA
+"86","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.758248",1.758248,"Aubertoperla sp (Illies)",0.3446,"Coilaco",NA
+"87","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.96255",0.96255,"Limnoperla jaffueli (Navás)",0.000131,"Coilaco",NA
+"88","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.388041",0.388041,"Meridialaris diguillina (Demoulin)",0.00151,"Coilaco",NA
+"89","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.388041",0.388041,"Cricotopus sp",0.003925,"Coilaco",NA
+"90","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.388041",0.388041,"Orthocladius sp1",0.087427,"Coilaco",NA
+"91","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.388041",0.388041,"Diamesa sp1",0.021773,"Coilaco",NA
+"92","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 15.769929",15.769929,"Cricotopus sp",0.102653,"Coilaco",NA
+"93","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 15.769929",15.769929,"Orthocladius sp1",0.121855,"Coilaco",NA
+"94","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 15.769929",15.769929,"Aubertoperla sp (Illies)",0.191745,"Coilaco",NA
+"95","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 15.769929",15.769929,"Orthocladius sp1",0.059573,"Coilaco",NA
+"96","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 75.50601",75.50601,"Thienemaniella sp",0.121855,"Coilaco",NA
+"97","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 75.50601",75.50601,"Antarctoperla michaelseni (Klapalek)",0.409932,"Coilaco",NA
+"98","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.367027",0.367027,"Eosericostoma sp",0.361276,"Coilaco",NA
+"99","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.367027",0.367027,"Meridialaris diguillina (Demoulin)",0.00151,"Coilaco",NA
+"100","Limoniinae Gen. sp","Limoniinae Gen. sp 2.850136",2.850136,"Glossomatidae Gen. Sp",0.001087,"Coilaco",NA
+"101","Limoniinae Gen. sp","Limoniinae Gen. sp 2.850136",2.850136,"Criconematidae",7.7e-05,"Coilaco",NA
+"102","Limoniinae Gen. sp","Limoniinae Gen. sp 1.391227",1.391227,"Meridialaris diguillina (Demoulin)",0.003617,"Coilaco",NA
+"103","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.500094",0.500094,"Orthocladius sp2",0.121907,"Coilaco",NA
+"104","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.500094",0.500094,"Diamesa sp1",0.103816,"Coilaco",NA
+"105","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.500094",0.500094,"Hapsiphlebia anastomosis (Demoulin)",0.006003,"Coilaco",NA
+"106","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.500094",0.500094,"Aubertoperla sp (Illies)",0.540601,"Coilaco",NA
+"107","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 1.177229",1.177229,"Limnoperla jaffueli (Navás)",0.12048,"Coilaco",NA
+"108","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 1.48986",1.48986,"Aubertoperla sp (Illies)",4e-06,"Coilaco",NA
+"109","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 2.437376",2.437376,"Antarctoperla michaelseni (Klapalek)",0.021295,"Coilaco",NA
+"110","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.708818",0.708818,"Aubertoperla sp (Illies)",0.03604,"Coilaco",NA
+"111","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.708818",0.708818,"Aubertoperla sp (Illies)",0.050878,"Coilaco",NA
+"112","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.708818",0.708818,"Udamocercia sp (Enderlein)",0.033357,"Coilaco",NA
+"113","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.499975",1.499975,"Orthocladius sp2",0.019161,"Coilaco",NA
+"114","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.916843",0.916843,"Meridialaris diguillina (Demoulin)",0.00151,"Coilaco",NA
+"115","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.916843",0.916843,"Thienemaniella sp",0.03786,"Coilaco",NA
+"116","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.916843",0.916843,"Thienemaniella sp",0.03786,"Coilaco",NA
+"117","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.414793",0.414793,"Smicridea chilensis (Navás)",6e-06,"Coilaco",NA
+"118","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.414793",0.414793,"Orthocladius sp2",0.019161,"Coilaco",NA
+"119","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.414793",0.414793,"Chironominae Gen. sp1",0.059573,"Coilaco",NA
+"120","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 2.406425",2.406425,"Copepod (Harpacticoideo)",7.5e-05,"Coilaco",NA
+"121","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 2.406425",2.406425,"Orthocladius sp1",0.03786,"Coilaco",NA
+"122","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 2.406425",2.406425,"Orthocladius sp1",0.00884,"Coilaco",NA
+"123","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Copepod (Harpacticoideo)",7.8e-05,"Coilaco",NA
+"124","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Eubosmina (cladocera)",0.029679,"Coilaco",NA
+"125","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Eosericostoma sp",0.221323,"Coilaco",NA
+"126","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Eubosmina (cladocera)",1.8e-05,"Coilaco",NA
+"127","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Eosericostoma sp",0.07347,"Coilaco",NA
+"128","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Diamesa sp1",0.059573,"Coilaco",NA
+"129","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Orthocladius sp1",0.041754,"Coilaco",NA
+"130","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 6.599729",6.599729,"Eubosmina (cladocera)",0.003187,"Coilaco",NA
+"131","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 3.278524",3.278524,"Eubosmina (cladocera)",0.051857,"Coilaco",NA
+"132","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 3.278524",3.278524,"Copepod (Harpacticoideo)",0.000108,"Coilaco",NA
+"133","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 3.278524",3.278524,"Andesiops peruviana (Ulmer)",0.054548,"Coilaco",NA
+"134","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 3.278524",3.278524,"Meridialaris diguillina (Demoulin)",5.6e-05,"Coilaco",NA
+"135","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.48575",0.48575,"Meridialaris diguillina (Demoulin)",0.001512,"Coilaco",NA
+"136","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.48575",0.48575,"Thienemaniella sp",0.014561,"Coilaco",NA
+"137","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.704481",0.704481,"Thienemaniella sp",0.008262,"Coilaco",NA
+"138","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.704481",0.704481,"Eosericostoma sp",0.07347,"Coilaco",NA
+"139","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 1.246122",1.246122,"Spercon (water mite)",0.3442,"Coilaco",NA
+"140","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 4.440376",4.440376,"Antarctoperla michaelseni (Klapalek)",0.004019,"Coilaco",NA
+"141","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 4.312759",4.312759,"Orthocladius sp1",0.135728,"Coilaco",NA
+"142","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.228726",5.228726,"Spercon (water mite)",9.612604,"Coilaco",NA
+"143","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.228726",5.228726,"Podonominae",3.3e-05,"Coilaco",NA
+"144","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Orthocladius sp1",0.18192,"Coilaco",NA
+"145","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Antarctoperla michaelseni (Klapalek)",0.002285,"Coilaco",NA
+"146","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Chironominae Gen. sp1",0.000186,"Coilaco",NA
+"147","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.986297",0.986297,"Andesiops peruviana (Ulmer)",0.001438,"Coilaco",NA
+"148","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.986297",0.986297,"Andesiops peruviana (Ulmer)",0.000186,"Coilaco",NA
+"149","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.798945",0.798945,"Elmis sp1 (Latreille)",0.000399,"Coilaco",NA
+"150","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.889458",0.889458,"Orthocladius sp1",6.3e-05,"Coilaco",NA
+"151","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.889458",0.889458,"Meridialaris diguillina (Demoulin)",0.54107,"Coilaco",NA
+"152","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.986297",0.986297,"Nousia delicata (Navás)",0.000445,"Coilaco",NA
+"153","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.986297",0.986297,"Smicridea chilensis (Navás)",0.000243,"Coilaco",NA
+"154","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.750268",0.750268,"Orthocladius sp1",0.100358,"Coilaco",NA
+"155","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.750268",0.750268,"Orthocladius c.f. excavatus",0.064657,"Coilaco",NA
+"156","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.750268",0.750268,"Eukiefierella sp",0.037886,"Coilaco",NA
+"157","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.104112",0.104112,"Eukiefierella sp",9.1e-05,"Coilaco",NA
+"158","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.104112",0.104112,"Eukiefierella sp",0.010676,"Coilaco",NA
+"159","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.104112",0.104112,"Stylodrilis (oligochaeta)",0.094871,"Coilaco",NA
+"160","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.4066",0.4066,"Andesiops peruviana (Ulmer)",0.041249,"Coilaco",NA
+"161","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.049191",0.049191,"Orthocladius sp2",0.18192,"Coilaco",NA
+"162","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 5.517262",5.517262,"Orthocladius sp1",0.158843,"Guampoe",NA
+"163","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 5.517262",5.517262,"Diamesa sp1",0.001939,"Guampoe",NA
+"164","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 6.387567",6.387567,"Gymnomectrionema sp",0.003925,"Guampoe",NA
+"165","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 6.387567",6.387567,"Diamesa sp2",0.283727,"Guampoe",NA
+"166","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 2.956469",2.956469,"Orthocladius sp2",0.161928,"Guampoe",NA
+"167","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 2.532672",2.532672,"Diamesa sp3",0.001637,"Guampoe",NA
+"168","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Smicridea chilensis (Navás)",0.203717,"Guampoe",NA
+"169","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Eosericostoma sp",0.016703,"Guampoe",NA
+"170","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Diamesa sp1",0.001127,"Guampoe",NA
+"171","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 8.69584",8.69584,"Orthocladius sp2",0.282877,"Guampoe",NA
+"172","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Orthocladius sp1",0.003035,"Guampoe",NA
+"173","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Meridialaris diguillina (Demoulin)",0.000344,"Guampoe",NA
+"174","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Thienemaniella sp",0.283727,"Guampoe",NA
+"175","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Eukiefierella sp",0.104148,"Guampoe",NA
+"176","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Orthocladius sp3",0.000724,"Guampoe",NA
+"177","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.655196",0.655196,"Spercon (water mite)",0.167886,"Guampoe",NA
+"178","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.655196",0.655196,"Aubertoperla sp (Illies)",0.027004,"Guampoe",NA
+"179","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.655196",0.655196,"Meridialaris diguillina (Demoulin)",4e-05,"Guampoe",NA
+"180","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.247327",0.247327,"Orthocladius sp1",0.031701,"Guampoe",NA
+"181","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 9.744842",9.744842,"Eukiefierella sp",0.063923,"Guampoe",NA
+"182","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 9.744842",9.744842,"Ceratoperla schwabei (Illies)",0.533322,"Guampoe",NA
+"183","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.932944",1.932944,"Meridialaris diguillina (Demoulin)",0.281219,"Guampoe",NA
+"184","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Aubertoperla sp (Illies)",0.03604,"Guampoe",NA
+"185","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Pictetoperla gayi (Pictet)",3.657232,"Guampoe",NA
+"186","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Ceratoperla schwabei (Illies)",1.150273,"Guampoe",NA
+"187","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Klapoteryx armillata (Navás)",0.008265,"Guampoe",NA
+"188","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Brachycentridae Gen. Sp",0.25849,"Guampoe",NA
+"189","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 4.174726",4.174726,"Aubertoperla sp (Illies)",0.001807,"Guampoe",NA
+"190","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.899731",0.899731,"Meridialaris diguillina (Demoulin)",0.012418,"Guampoe",NA
+"191","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.750268",0.750268,"Orthocladius sp4",0.237552,"Guampoe",NA
+"192","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.188114",0.188114,"Thienemaniella sp",0.031701,"Guampoe",NA
+"193","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.188114",0.188114,"Eukiefierella sp",0.000724,"Guampoe",NA
+"194","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.324724",0.324724,"Eukiefierella sp",0.237552,"Guampoe",NA
+"195","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.324724",0.324724,"Smicridea chilensis (Navás)",0.174281,"Guampoe",NA
+"196","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.324724",0.324724,"Andesiops peruviana (Ulmer)",0.455413,"Guampoe",NA
+"197","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.324724",0.324724,"Aubertoperla sp (Illies)",0.050878,"Guampoe",NA
+"198","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.064941",0.064941,"Antarctoperla michaelseni (Klapalek)",0.07094,"Guampoe",NA
+"199","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.064941",0.064941,"Oligochaeta",0.145836,"Guampoe",NA
+"200","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.064941",0.064941,"Thienemaniella sp",0.001127,"Guampoe",NA
+"201","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.064941",0.064941,"Diamesa sp2",0.237552,"Guampoe",NA
+"202","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.393727",0.393727,"Diamesa sp1",0.231736,"Guampoe",NA
+"203","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.393727",0.393727,"Orthocladius sp2",0.104148,"Guampoe",NA
+"204","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.393727",0.393727,"Diamesa sp2",0.020093,"Guampoe",NA
+"205","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.393727",0.393727,"Orthocladius sp2",0.001125,"Guampoe",NA
+"206","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Diamesa sp1",0.117522,"Guampoe",NA
+"207","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Eukiefierella sp",0.001051,"Guampoe",NA
+"208","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Rheocricotopus sp",0.002075,"Guampoe",NA
+"209","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Gymnomectrionema sp",0.124143,"Guampoe",NA
+"210","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Smicridea chilensis (Navás)",0.463561,"Guampoe",NA
+"211","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Orthocladius sp4",0.143567,"Guampoe",NA
+"212","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.889312",0.889312,"Spercon (water mite)",2.299495,"Guampoe",NA
+"213","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.178461",0.178461,"Thienemaniella sp",0.015996,"Guampoe",NA
+"214","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.250212",0.250212,"Thienemaniella sp",0.075508,"Guampoe",NA
+"215","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.250212",0.250212,"Spercon (water mite)",1.658049,"Guampoe",NA
+"216","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.170543",0.170543,"Eukiefierella sp",0.003648,"Guampoe",NA
+"217","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.14813",0.14813,"Massartellopsis sp (Demoulin)",0.003303,"Guampoe",NA
+"218","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.134276",0.134276,"Diamesa sp1",0.00884,"Guampoe",NA
+"219","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 21.704979",21.704979,"Orthocladius sp2",0.143567,"Guampoe",NA
+"220","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 21.704979",21.704979,"Orthocladius sp2",0.025335,"Guampoe",NA
+"221","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 21.704979",21.704979,"Orthocladius sp2",0.084383,"Guampoe",NA
+"222","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 21.704979",21.704979,"Thienemaniella sp",0.230817,"Guampoe",NA
+"223","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 21.704979",21.704979,"Thienemaniella sp",0.089256,"Guampoe",NA
+"224","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Orthocladius sp2",0.143567,"Guampoe",NA
+"225","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Orthocladius sp1",0.025335,"Guampoe",NA
+"226","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Smicridea chilensis (Navás)",1.867415,"Guampoe",NA
+"227","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Diamesa sp2",0.100257,"Guampoe",NA
+"228","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Diamesa sp1",0.054875,"Guampoe",NA
+"229","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 9.793249",9.793249,"Orthocladius sp1",0.084383,"Guampoe",NA
+"230","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Eukiefierella sp",0.006124,"Guampoe",NA
+"231","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Diamesa sp1",0.054875,"Guampoe",NA
+"232","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.117881,"Guampoe",NA
+"233","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Orthocladius sp1",0.015996,"Guampoe",NA
+"234","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Diamesa sp1",0.009404,"Guampoe",NA
+"235","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.327955",1.327955,"Orthocladius sp1",0.015996,"Guampoe",NA
+"236","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 5.185665",5.185665,"Thienemaniella sp",0.143567,"Guampoe",NA
+"237","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 5.185665",5.185665,"Chironominae Gen. sp1",0.021591,"Guampoe",NA
+"238","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 5.185665",5.185665,"Orthocladius sp1",0.025335,"Guampoe",NA
+"239","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.06896",1.06896,"Chironominae Gen. sp1",0.117522,"Guampoe",NA
+"240","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.06896",1.06896,"Orthocladius sp1",0.375529,"Guampoe",NA
+"241","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.695702",0.695702,"Orthocladius sp2",0.006124,"Guampoe",NA
+"242","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.695702",0.695702,"Orthocladius sp1",7e-06,"Guampoe",NA
+"243","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.695702",0.695702,"Spercon (water mite)",0.744834,"Guampoe",NA
+"244","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.259382",1.259382,"Thienemaniella sp",0.143567,"Guampoe",NA
+"245","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.526588",0.526588,"Orthocladius sp1",0.143567,"Guampoe",NA
+"246","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.526588",0.526588,"Spercon (water mite)",4.770195,"Guampoe",NA
+"247","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.122658",0.122658,"Orthocladius sp1",0.089256,"Guampoe",NA
+"248","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.122658",0.122658,"Thienemaniella sp",0.015996,"Guampoe",NA
+"249","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.122658",0.122658,"Diamesa sp2",0.025335,"Guampoe",NA
+"250","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 8.102787",8.102787,"Orthocladius sp3",0.052407,"Guampoe",NA
+"251","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 8.102787",8.102787,"Diamesa sp2",0.104096,"Guampoe",NA
+"252","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.411461",10.411461,"Orthocladius sp1",0.00269,"Guampoe",NA
+"253","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.411461",10.411461,"Orthocladius sp2",0.230817,"Guampoe",NA
+"254","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.871709",10.871709,"Chironominae Gen. sp1",0.117522,"Guampoe",NA
+"255","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.871709",10.871709,"Diamesa sp2",0.143567,"Guampoe",NA
+"256","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.871709",10.871709,"Orthocladius sp1",0.060391,"Guampoe",NA
+"257","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 10.871709",10.871709,"Orthocladius sp1",0.052407,"Guampoe",NA
+"258","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.259382",1.259382,"Thienemaniella sp",0.089256,"Guampoe",NA
+"259","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.017207",0.017207,"Orthocladius sp1",0.00269,"Guampoe",NA
+"260","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.027076",0.027076,"Orthocladius sp2",0.00884,"Guampoe",NA
+"261","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.787997",0.787997,"Orthocladius sp1",0.000421,"Guampoe",NA
+"262","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.787997",0.787997,"Diamesa sp2",0.000362,"Guampoe",NA
+"263","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.787997",0.787997,"Orthocladius sp1",0.010676,"Guampoe",NA
+"264","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.787997",0.787997,"Orthocladius sp2",0.17811,"Guampoe",NA
+"265","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.829584",0.829584,"Eukiefierella sp",0.000138,"Guampoe",NA
+"266","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Diamesa sp1",0.010676,"Guampoe",NA
+"267","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Copepod (Harpacticoideo)",0.000133,"Guampoe",NA
+"268","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Spiders",0.483503,"Guampoe",NA
+"269","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Eukiefierella sp",0.016764,"Guampoe",NA
+"270","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Thienemaniella sp",0.010676,"Guampoe",NA
+"271","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.212568",1.212568,"Chironominae Gen. sp1",0.03786,"Guampoe",NA
+"272","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Orthocladius sp1",0.004968,"Guampoe",NA
+"273","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Thienemaniella sp",0.041754,"Guampoe",NA
+"274","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.322924",1.322924,"Tvetenia c.f. calvecens",0.17811,"Guampoe",NA
+"275","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.322924",1.322924,"Thienemaniella sp",0.122482,"Guampoe",NA
+"276","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.322924",1.322924,"Orthocladius sp1",0.003925,"Guampoe",NA
+"277","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Orthocladius sp2",0.17811,"Guampoe",NA
+"278","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Eosericostoma sp",0.969576,"Guampoe",NA
+"279","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Orthocladius sp1",0.002273,"Guampoe",NA
+"280","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.634844",0.634844,"Eukiefierella sp",3.8e-05,"Guampoe",NA
+"281","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.634844",0.634844,"Andesiops peruviana (Ulmer)",0.000788,"Guampoe",NA
+"282","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.230836",0.230836,"Meridialaris diguillina (Demoulin)",0.120777,"Guampoe",NA
+"283","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Thienemaniella sp",0.107282,"Guampoe",NA
+"284","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 1.159642",1.159642,"Podonominae",0.001241,"Guampoe",NA
+"285","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 0.257952",0.257952,"Chironominae Gen. sp1",0.000724,"Guampoe",NA
+"286","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 0.146675",0.146675,"Orthocladius sp1",4e-06,"Guampoe",NA
+"287","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Orthocladius sp3",0.050006,"Guampoe",NA
+"288","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Spercon (water mite)",0.394397,"Guampoe",NA
+"289","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Thienemaniella sp",0.121855,"Guampoe",NA
+"290","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Orthocladius sp1",0.122482,"Guampoe",NA
+"291","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Eukiefierella sp",0.015645,"Guampoe",NA
+"292","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 6.0808",6.0808,"Orthocladius sp3",0.028625,"Guampoe",NA
+"293","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.563454",0.563454,"Orthocladius sp1",3.3e-05,"Guampoe",NA
+"294","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.756001",0.756001,"Thienemaniella sp",0.000163,"Guampoe",NA
+"295","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.496333",0.496333,"Eukiefierella sp",0.021773,"Guampoe",NA
+"296","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.563454",0.563454,"Thienemaniella sp",0.099651,"Guampoe",NA
+"297","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.279477",0.279477,"Eukiefierella sp",0.019161,"Guampoe",NA
+"298","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.279477",0.279477,"Orthocladius sp1",0.000724,"Guampoe",NA
+"299","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.464795",0.464795,"Thienemaniella sp",3.3e-05,"Guampoe",NA
+"300","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.464795",0.464795,"Eukiefierella sp",0.001878,"Guampoe",NA
+"301","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.405642",0.405642,"Orthocladius sp1",0.010676,"Guampoe",NA
+"302","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Nousia delicata (Navás)",8e-06,"Guampoe",NA
+"303","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Andesiops peruviana (Ulmer)",0.008749,"Guampoe",NA
+"304","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.257297",1.257297,"Eubosmina (cladocera)",2.3e-05,"Guampoe",NA
+"305","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.219532",1.219532,"Smicridea chilensis (Navás)",0.092633,"Guampoe",NA
+"306","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.219532",1.219532,"Copepod (Harpacticoideo)",0.000225,"Guampoe",NA
+"307","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 1.219532",1.219532,"Eubosmina (cladocera)",0.988519,"Guampoe",NA
+"308","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Orthocladius sp1",0.005845,"Guampoe",NA
+"309","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Eubosmina (cladocera)",0.988519,"Guampoe",NA
+"310","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Copepod (harpacticoideo)",4.2e-05,"Guampoe",NA
+"311","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Copepod (harpacticoideo)",3.2e-05,"Guampoe",NA
+"312","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Andesiops peruviana (Ulmer)",0.285703,"Guampoe",NA
+"313","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Eubosmina (cladocera)",0.016566,"Guampoe",NA
+"314","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.337874",0.337874,"Eubosmina (cladocera)",0.006104,"Guampoe",NA
+"315","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.03469",0.03469,"Orthocladius sp1",0.000138,"Guampoe",NA
+"316","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.03469",0.03469,"Orthocladius sp1",6e-05,"Guampoe",NA
+"317","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.043497",0.043497,"Eukiefierella sp",0.000138,"Guampoe",NA
+"318","Limnephilidae Gen. sp","Limnephilidae Gen. sp 61.781902",61.781902,"Spercon (water mite)",2.883134,"Guampoe",NA
+"319","Limnephilidae Gen. sp","Limnephilidae Gen. sp 61.781902",61.781902,"Orthocladius sp1",0.000724,"Guampoe",NA
+"320","Limnephilidae Gen. sp","Limnephilidae Gen. sp 61.781902",61.781902,"Thienemaniella sp",0.07714,"Guampoe",NA
+"321","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.003059",0.003059,"Orthocladius sp1",0.000362,"Guampoe",NA
+"322","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 3.065218",3.065218,"Smicridea chilensis (Navás)",0.029428,"Guampoe",NA
+"323","Ceratoperla schwabei (Illies)","Ceratoperla schwabei (Illies) 0.787997",0.787997,"Meridialaris diguillina (Demoulin)",0.125647,"Guampoe",NA
+"324","Diamphipnoa sp (Gerstaecker)","Diamphipnoa sp (Gerstaecker) 0.65586",0.65586,"Simulium sp",0.901794,"Guampoe",NA
+"325","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.367027",0.367027,"Orthocladius sp1",0.008228,"Guampoe",NA
+"326","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 1.177229",1.177229,"Orthocladius sp1",0.001939,"Guampoe",NA
+"327","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.173035",2.173035,"Antarctoperla michaelseni (Klapalek)",0.003231,"Guampoe",NA
+"328","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.322574",3.322574,"Orthocladius sp2",0.10477,"Guampoe",NA
+"329","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 2.123842",2.123842,"Orthocladius sp1",0.097099,"Guampoe",NA
+"330","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.722623",0.722623,"Meridialaris diguillina (Demoulin)",0.00151,"Guampoe",NA
+"331","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.722623",0.722623,"Aubertoperla sp (Illies)",0.802227,"Guampoe",NA
+"332","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.722623",0.722623,"Thienemaniella sp",0.014557,"Guampoe",NA
+"333","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.104112",0.104112,"Meridialaris diguillina (Demoulin)",0.125647,"Guampoe",NA
+"334","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.104112",0.104112,"Eukiefierella sp",0.195224,"Guampoe",NA
+"335","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.251391",0.251391,"Thienemaniella sp",0.073517,"Guampoe",NA
+"336","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.037855",0.037855,"Antarctoperla michaelseni (Klapalek)",0.04212,"Guampoe",NA
+"337","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.322471",0.322471,"Limnoperla jaffueli (Navás)",0.250171,"Guampoe",NA
+"338","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.322471",0.322471,"Orthocladius sp1",0.001084,"Guampoe",NA
+"339","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.322471",0.322471,"Orthocladius sp1",0.121855,"Guampoe",NA
+"340","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 575.904142",575.904142,"Thienemaniella sp",0.073517,"Guampoe",NA
+"341","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.19211",0.19211,"Cricotopus sp",0.075508,"Guampoe",NA
+"342","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.181562",0.181562,"Aubertoperla sp (Illies)",0.03604,"Guampoe",NA
+"343","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.104112",0.104112,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.098533,"Guampoe",NA
+"344","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.104112",0.104112,"Nousia delicata (Navás)",0.277038,"Guampoe",NA
+"345","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.018711",0.018711,"Simulium sp",0.402335,"Guampoe",NA
+"346","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.011568",0.011568,"Diamesa sp1",0.004968,"Guampoe",NA
+"347","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.004791",0.004791,"Andesiops peruviana (Ulmer)",0.008765,"Guampoe",NA
+"348","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.004791",0.004791,"Eukiefierella sp",0.002274,"Guampoe",NA
+"349","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.028492",0.028492,"Simulium sp",0.155489,"Guampoe",NA
+"350","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.011568",0.011568,"Orthocladius sp1",0.10477,"Guampoe",NA
+"351","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.613117",0.613117,"Aubertoperla sp (Illies)",0.027435,"Guampoe",NA
+"352","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.613117",0.613117,"Meridialaris diguillina (Demoulin)",0.002059,"Guampoe",NA
+"353","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.613117",0.613117,"Meridialaris diguillina (Demoulin)",0.001512,"Guampoe",NA
+"354","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.613117",0.613117,"Aubertoperla sp (Illies)",0.008899,"Guampoe",NA
+"355","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.613117",0.613117,"Orthocladius sp1",0.002274,"Guampoe",NA
+"356","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.210321",0.210321,"Meridialaris diguillina (Demoulin)",0.050226,"Guampoe",NA
+"357","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.210321",0.210321,"Aubertoperla sp (Illies)",0.103483,"Guampoe",NA
+"358","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.210321",0.210321,"Simulium sp",0.006485,"Guampoe",NA
+"359","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.210321",0.210321,"Orthocladius sp1",0.000724,"Guampoe",NA
+"360","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.210321",0.210321,"Orthocladius sp3",0.173854,"Guampoe",NA
+"361","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.043497",0.043497,"Orthocladius sp1",0.003925,"Guampoe",NA
+"362","Brachycentridae Gen. Sp","Brachycentridae Gen. Sp 0.043497",0.043497,"Rheocricotopus sp",0.008353,"Guampoe",NA
+"363","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.114512",0.114512,"Eukiefierella sp",0.002633,"Guampoe",NA
+"364","Limoniinae Gen. sp","Limoniinae Gen. sp 1.048871",1.048871,"Meridialaris diguillina (Demoulin)",0.065055,"Guampoe",NA
+"365","Limoniinae Gen. sp","Limoniinae Gen. sp 0.534695",0.534695,"Klapoteryx armillata (Navás)",0.028158,"Guampoe",NA
+"366","Limoniinae Gen. sp","Limoniinae Gen. sp 0.386189",0.386189,"Limnoperla jaffueli (Navás)",0.000446,"Guampoe",NA
+"367","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 2.059667",2.059667,"Ceratoperla schwabei (Illies)",3.007819,"Trancura",NA
+"368","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 2.059667",2.059667,"Orthocladius sp1",0.241906,"Trancura",NA
+"369","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.334583",1.334583,"Meridialaris diguillina (Demoulin)",0.000612,"Trancura",NA
+"370","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.334583",1.334583,"Orthocladius sp1",0.241906,"Trancura",NA
+"371","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.334583",1.334583,"Thienemaniella sp",0.124143,"Trancura",NA
+"372","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.334583",1.334583,"Nousia delicata (Navás)",0.022018,"Trancura",NA
+"373","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 1.259382",1.259382,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.105754,"Trancura",NA
+"374","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 1.259382",1.259382,"Meridialaris diguillina (Demoulin)",0.002055,"Trancura",NA
+"375","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 1.259382",1.259382,"Limnoperla jaffueli (Navás)",0.021182,"Trancura",NA
+"376","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 1.259382",1.259382,"Orthocladius sp1",0.124143,"Trancura",NA
+"377","Rhyacophilida Gen sp2","Rhyacophilida Gen sp2 0.4066",0.4066,"Cricotopus sp",0.03786,"Trancura",NA
+"378","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Orthocladius sp1",0.171331,"Trancura",NA
+"379","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Rheocricotopus sp",0.006698,"Trancura",NA
+"380","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Orthocladius sp2",0.009006,"Trancura",NA
+"381","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Eosericostoma sp",0.30161,"Trancura",NA
+"382","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.000576,"Trancura",NA
+"383","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Andesiops peruviana (Ulmer)",0.105754,"Trancura",NA
+"384","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Limnoperla jaffueli (Navás)",0.547507,"Trancura",NA
+"385","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Antarctoperla michaelseni (Klapalek)",0.460051,"Trancura",NA
+"386","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Aubertoperla sp (Illies)",0.557628,"Trancura",NA
+"387","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.000807,"Trancura",NA
+"388","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 5.991202",5.991202,"Andesiops peruviana (Ulmer)",0.301216,"Trancura",NA
+"389","Kempnyella genuali","Kempnyella genuali 5.018864",5.018864,"Aubertoperla sp (Illies)",0.061461,"Trancura",NA
+"390","Kempnyella genuali","Kempnyella genuali 5.018864",5.018864,"Nousia delicata (Navás)",0.107178,"Trancura",NA
+"391","Kempnyella genuali","Kempnyella genuali 3.289813",3.289813,"Limnoperla jaffueli (Navás)",0.026298,"Trancura",NA
+"392","Kempnyella genuali","Kempnyella genuali 3.289813",3.289813,"Orthocladius sp1",0.013944,"Trancura",NA
+"393","Kempnyella genuali","Kempnyella genuali 3.289813",3.289813,"Antarctoperla michaelseni (Klapalek)",0.214124,"Trancura",NA
+"394","Kempnyella genuali","Kempnyella genuali 5.701154",5.701154,"Rheocricotopus sp",0.087427,"Trancura",NA
+"395","Kempnyella genuali","Kempnyella genuali 5.701154",5.701154,"Orthocladius sp3",0.129622,"Trancura",NA
+"396","Kempnyella genuali","Kempnyella genuali 5.701154",5.701154,"Thienemaniella sp",0.069958,"Trancura",NA
+"397","Kempnyella genuali","Kempnyella genuali 0.554747",0.554747,"Orthocladius sp1",0.080159,"Trancura",NA
+"398","Kempnyella genuali","Kempnyella genuali 0.554747",0.554747,"Cricotopus sp",0.006153,"Trancura",NA
+"399","Pictetoperla gayi (Pictet)","Pictetoperla gayi (Pictet) 0.197161",0.197161,"Orthocladius sp2",5.6e-05,"Trancura",NA
+"400","Klapoteryx armillata (Navás)","Klapoteryx armillata (Navás) 2.590798",2.590798,"Limnoperla jaffueli (Navás)",0.208671,"Trancura",NA
+"401","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 0.757382",0.757382,"Andesiops peruviana (Ulmer)",0.001282,"Trancura",NA
+"402","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 1.042876",1.042876,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.013635,"Trancura",NA
+"403","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 3.351282",3.351282,"Meridialaris diguillina (Demoulin)",0.016165,"Trancura",NA
+"404","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.166512",0.166512,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.008241,"Trancura",NA
+"405","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Orthocladius sp1",0.000223,"Trancura",NA
+"406","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Thienemaniella sp",0.11691,"Trancura",NA
+"407","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 4.531528",4.531528,"Orthocladius sp3",0.034218,"Trancura",NA
+"408","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 4.531528",4.531528,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.109314,"Trancura",NA
+"409","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.219377,"Trancura",NA
+"410","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Meridialaris diguillina (Demoulin)",0.303855,"Trancura",NA
+"411","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 7.722232",7.722232,"Aubertoperla sp (Illies)",1.002818,"Trancura",NA
+"412","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Orthocladius sp3",0.080166,"Trancura",NA
+"413","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Andesiops peruviana (Ulmer)",0.23738,"Trancura",NA
+"414","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.405642",0.405642,"Orthocladius sp3",0.080159,"Trancura",NA
+"415","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.986297",0.986297,"Nousia delicata (Navás)",0.255389,"Trancura",NA
+"416","Klapoteryx kuscheli (Illies)","Klapoteryx kuscheli (Illies) 5.7352",5.7352,"Orthocladius sp2",0.024741,"Trancura",NA
+"417","Klapoteryx kuscheli (Illies)","Klapoteryx kuscheli (Illies) 10.30977",10.30977,"Antarctoperla michaelseni (Klapalek)",0.010709,"Trancura",NA
+"418","Kempnyella genuali","Kempnyella genuali 7.236081",7.236081,"Meridialaris diguillina (Demoulin)",0.179252,"Trancura",NA
+"419","Kempnyella genuali","Kempnyella genuali 0.356608",0.356608,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.025474,"Trancura",NA
+"420","Kempnyella genuali","Kempnyella genuali 0.356608",0.356608,"Nousia delicata (Navás)",0.003116,"Trancura",NA
+"421","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 3.897018",3.897018,"Orthocladius sp1",0.183516,"Trancura",NA
+"422","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.521767",2.521767,"Aubertoperla sp (Illies)",0.00233,"Trancura",NA
+"423","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.173035",2.173035,"Orthocladius sp1",0.027564,"Trancura",NA
+"424","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.173035",2.173035,"Orthocladius sp1",5.7e-05,"Trancura",NA
+"425","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.173035",2.173035,"Eosericostoma sp",0.156345,"Trancura",NA
+"426","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.805543",2.805543,"Orthocladius sp1",0.002633,"Trancura",NA
+"427","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.805543",2.805543,"Thienemaniella sp",4e-06,"Trancura",NA
+"428","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 2.805543",2.805543,"Orthocladius sp2",5.5e-05,"Trancura",NA
+"429","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.756001",0.756001,"Diamesa sp2",0.002421,"Trancura",NA
+"430","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.636134",0.636134,"Orthocladius sp1",5.7e-05,"Trancura",NA
+"431","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.636134",0.636134,"Diamesa sp2",0.000139,"Trancura",NA
+"432","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.636134",0.636134,"Eukiefierella sp",0.000423,"Trancura",NA
+"433","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.636134",0.636134,"Andesiops peruviana (Ulmer)",0.005224,"Trancura",NA
+"434","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.571897",1.571897,"Thienemaniella sp",6.3e-05,"Trancura",NA
+"435","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.181788",0.181788,"Rheocricotopus sp",5.7e-05,"Trancura",NA
+"436","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.181788",0.181788,"Thienemaniella sp",4.7e-05,"Trancura",NA
+"437","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.977691",0.977691,"Orthocladius sp1",0.021331,"Trancura",NA
+"438","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.977691",0.977691,"Meridialaris diguillina (Demoulin)",0.179252,"Trancura",NA
+"439","Polycentropodidae Gen. Sp","Polycentropodidae Gen. Sp 0.908528",0.908528,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.49914,"Trancura",NA
+"440","Tanypodinae Gen. Sp","Tanypodinae Gen. Sp 0.02583",0.02583,"Diamesa sp1",7.9e-05,"Trancura",NA
+"441","Tanypodinae Gen. Sp","Tanypodinae Gen. Sp 0.01756",0.01756,"Eukiefierella sp",2e-06,"Trancura",NA
+"442","Tanypodinae Gen. Sp","Tanypodinae Gen. Sp 0.02583",0.02583,"Orthocladius sp1",1.3e-05,"Trancura",NA
+"443","Limoniinae Gen. sp","Limoniinae Gen. sp 0.438348",0.438348,"Diamesa sp2",0.001051,"Trancura",NA
+"444","Limoniinae Gen. sp","Limoniinae Gen. sp 0.690366",0.690366,"orthocladius sp1",2e-06,"Trancura",NA
+"445","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 4.742211",4.742211,"Simulium sp",0.004424,"Trancura",NA
+"446","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 4.742211",4.742211,"Eosericostoma sp",3.3e-05,"Trancura",NA
+"447","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 4.742211",4.742211,"Orthocladius sp1",0.105238,"Trancura",NA
+"448","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 2.576696",2.576696,"Orthocladius sp2",0.000138,"Trancura",NA
+"449","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 2.576696",2.576696,"Antarctoperla michaelseni (Klapalek)",0.001596,"Trancura",NA
+"450","Chiloporter penai (Demoulin)","Chiloporter penai (Demoulin) 2.576696",2.576696,"Orthocladius sp1",0.001051,"Trancura",NA
+"451","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.143826",1.143826,"Meridialaris diguillina (Demoulin)",0.126736,"Trancura",NA
+"452","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.143826",1.143826,"Eukiefierella sp",0.003925,"Trancura",NA
+"453","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 1.143826",1.143826,"Deceptiviosa torrens (Lugo-Ortiz & McCafferty)",0.143171,"Trancura",NA
+"454","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.405642",0.405642,"Andesiops peruviana (Ulmer)",0.143171,"Trancura",NA
+"455","Smicridea chilensis (Navás)","Smicridea chilensis (Navás) 0.405642",0.405642,"Rheocricotopus sp",0.100967,"Trancura",NA
+"456","Rhyacophilida Gen sp1","Rhyacophilida Gen sp1 0.004791",0.004791,"Orthocladius sp1",0.000724,"Trancura",NA
+"457","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.505061",0.505061,"Copepod (ciclopoideo)",0.000294,"Trancura",NA
+"458","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.505061",0.505061,"Copepod (Harpacticoideo)",0.000334,"Trancura",NA
+"459","Rhyacophilida Gen sp3","Rhyacophilida Gen sp3 0.505061",0.505061,"Diamesa sp2",0.075636,"Trancura",NA
+"460","Limoniinae Gen. sp","Limoniinae Gen. sp 0.89985",0.89985,"Udamocercia sp (Enderlein)",0.002396,"Trancura",NA
+"461","Limoniinae Gen. sp","Limoniinae Gen. sp 1.112534",1.112534,"Diamesa sp1",0.000724,"Trancura",NA
+"462","Limoniinae Gen. sp","Limoniinae Gen. sp 1.112534",1.112534,"Orthocladius sp1",0.013183,"Trancura",NA
+"463","Limoniinae Gen. sp","Limoniinae Gen. sp 1.112534",1.112534,"Copepod (Harpacticoideo)",2.4e-05,"Trancura",NA
+"464","Limoniinae Gen. sp","Limoniinae Gen. sp 0.534695",0.534695,"Orthocladius sp1",0.006181,"Trancura",NA
+"465","Limoniinae Gen. sp","Limoniinae Gen. sp 1.212481",1.212481,"Thienemaniella sp",0.092067,"Trancura",NA
+"466","Limoniinae Gen. sp","Limoniinae Gen. sp 0.764861",0.764861,"Orthocladius sp1",0.053754,"Trancura",NA

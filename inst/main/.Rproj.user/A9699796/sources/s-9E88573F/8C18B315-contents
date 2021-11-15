@@ -1,0 +1,242 @@
+## Anubhav Gupta
+## 08.07.2019
+## Here, I implement rejection algorithm in approximate Bayesian computation (ABC)
+## I use the "ABC Rejection Sampling Algorithm" from the book Handbook of ABC page 17.
+## I implement parallel computing here.
+## The summary statistics used here compares one to one interaction between real and predicted food web matrix.
+## I use confusion matrix as summary statistics
+
+rm(list=ls())
+setwd("~/Google Drive/GitHub/chapter1ABC/from_abc_book/rejection_book/")
+source("~/Google Drive/GitHub/chapter1ABC/from_abc_book/functions/abc.functions_book.r")
+source("~/Google Drive/GitHub/chapter1ABC/from_abc_book/rejection_book/Plot.matrix_uncertainty.r")
+source("~/Google Drive/GitHub/chapter1ABC/from_abc_book/functions/foodweb_prop.R")
+
+
+library(tictoc)
+## Start of computation time
+tic("Time elapsed:")
+
+## Loading required libraries
+library(ggpubr); library(plotrix); library(ggplot2)
+library(cowplot); library(latex2exp); library(HDInterval)
+library(doParallel); library(foreach); library(raster)
+
+set.seed(1)
+## Global variables
+l_a <- 0; r_a <- 10
+l_ai <- -1; r_ai <- 1
+l_aj <- -1; r_aj <- 1
+l_r.b <- -10; r_r.b <- 5
+a.shape <- 0.4; a.scale <- 0.05
+r.b.shape <- 0.5; r.b.scale <- 2.0
+
+abc.rejection <- function(all.web.info, tol=tol, N=N)
+{
+  real.web <- all.web.info$predation.matrix
+  M <- all.web.info$species.sizes    #body size
+  S <- dim(real.web)[1]
+  target.C <- sum(real.web)/S^2    
+  parms <- list(e=e, n=n, ni=ni, r.a=r.a, M=M, S=S, target.C=target.C, real.web=real.web)
+  
+  ss_real <- real.web
+  
+  count <- 1
+  post_dists <- data.frame(a=double(), ai=double(), aj=double(), r.b=double())
+  n <- N/n_cores
+  res_pcores <- foreach(i = 1:n_cores, .combine = rbind) %dopar% 
+  {
+    set.seed(i)
+    acc_ss <- numeric(n)
+    dummy <- numeric(n)
+    total_sim <- 0
+    while(count <= n)
+    {
+      ## Generating parameters from sampling
+      local_a <- rweibull(1, shape = a.shape, scale = a.scale)
+      local_ai <- runif(1, l_ai, r_ai)
+      local_aj <- runif(1, l_aj, r_aj)
+      local_r.b <- rweibull(1, shape = r.b.shape, scale = r.b.scale)
+      local_par <- data.frame(a=local_a, ai=local_ai, aj=local_aj, r.b=local_r.b)
+      
+      ## Generating summary stat from likelihood
+      ss_sim <- ratio.power_new(opt=local_par, x=parms)
+      num_gen <- runif(1, 0, 1)
+      K <- weights(0, tol, "epanechnikov")
+      TP <- sum(ss_sim==ss_real & ss_real==1)
+      TN <- sum(ss_sim==ss_real & ss_real==0)
+      P <- sum(ss_real==1)
+      N1 <- sum(ss_real==0)
+      
+      # diff <- sum((ss_sim-ss_real)==0)/(S^2)
+      # dist <- 1-diff
+      acc <- (TP+TN)/(P+N1)
+      sim_conn <- sum(ss_sim)/(S^2)
+      
+      # acc <- alpha*(TP/P) + (1-alpha)*(TN/N1)
+      dist <- 1-acc
+      print(dist)
+      pbly <- weights(dist, tol, "epanechnikov")/K
+      if (num_gen<pbly)
+      {
+        acc_ss[count] <- acc
+        dummy[count] <- sim_conn
+        post_dists <- rbind(post_dists, local_par)
+        count <- count + 1
+      }
+      total_sim <- total_sim+1
+    }
+    list(post_dists_pcore = post_dists, acc_ss_pcore = acc_ss, dummy_pcore = dummy, total_sim_pcore = total_sim)
+  }
+  
+  post_dists <- res_pcores[[1]]
+  acc_ss <- res_pcores[[n_cores+1]]
+  dummy <- res_pcores[[2*n_cores+1]]
+  total_sim <- res_pcores[[3*n_cores+1]]
+  
+  if(n_cores > 1){
+    for (i in 1:(n_cores-1)){
+      post_dists <- rbind(post_dists, res_pcores[[i+1]])
+      acc_ss <- c(acc_ss, res_pcores[[n_cores+i+1]])
+      dummy <- c(dummy, res_pcores[[2*n_cores+i+1]])
+      total_sim <- total_sim + res_pcores[[3*n_cores+i+1]]
+    }
+  }
+  
+  list(acc_ss = acc_ss, dummy = dummy, post_dists = post_dists, total_sim = total_sim)
+  
+}
+
+## Proposal and sampling density are same.
+
+for (foodweb in c("Benguela Pelagic"))
+{
+  web.to.analyse <- foodweb
+  load(paste("~/Google Drive/GitHub/chapter1ABC/data/food webs/", web.to.analyse, ".web.Rdata", sep=""))
+  M <- all.web.info$species.sizes    #body size
+  tol <- 0.20
+  N <- 1000
+  n_cores <- 5
+  e <- 1
+  n <- 1
+  ni <- -3/4
+  r.a = 1
+  prop.1.corr <- numeric(N)
+  prop.0.corr <- numeric(N)
+  registerDoParallel(cores=n_cores)
+  
+  ## Function defined to plot parameter distribution
+  plott <- function(xval, labell)
+  {
+    if(labell == "a") {xval = log(xval); xi <- min(xval); xf <- max(xval); labell = "log(a)"; xpr <- log(rweibull(100000, shape = a.shape, scale = a.scale))}
+    else if (labell == "a_i") {xi <- l_ai; xf <- r_ai; xpr <- runif(100000,l_ai, r_ai)}
+    else if (labell == "a_j") {xi <- l_aj; xf <- r_aj; xpr <- runif(100000,l_aj, r_aj)}
+    else if (labell == "r.b") {xval = log(xval); xi <- min(xval); xf <- max(xval); labell = "log(r.b)"; xpr <- log(rweibull(100000, shape = r.b.shape, scale = r.b.scale))}
+    df <- data.frame(xval = xval, xpr=xpr)
+    plott <- ggplot(df, aes(x=xval, y = ..density..)) +
+      geom_histogram(bins = 30) +
+      geom_density(color="red") +
+      geom_density(mapping = aes(x = xpr, y = ..density.. ), color = "green") +
+      xlab(TeX(labell)) +
+      xlim(c(xi,xf)) 
+  }
+  
+  ## Creating a directory where the output files will be saved
+  dirnam <- paste(c(web.to.analyse,'_N=', N, '_tol=', tol, '_conf_uninfprior'), collapse = '')
+  dir.create(dirnam)
+  setwd(paste(c('./',dirnam), collapse = ''))
+  
+  ## fit the parameters
+  abc.RH.web <- abc.rejection(all.web.info, tol=tol, N=N)
+  other <- data.frame(e=e, n=n, ni=ni, r.a=r.a)
+  prop_web <- fw_prop(abc.RH.web, other, all.web.info)
+  real <- real_prop(all.web.info)
+  prop <- prop_web$prop
+  best.web <- prop_web$web
+  prop.0.corr <- prop$prop.0.corr
+  prop.1.corr <- prop$prop.1.corr
+  
+  ## Plotting the structural properties of food web
+  s1 <- plot_prop(prop$prop_basal, "Proportion basal", real$prop_basal)
+  s2 <- plot_prop(prop$prop_inter, "Proportion intermediate", real$prop_inter)
+  s3 <- plot_prop(prop$prop_top, "Proportion top", real$prop_top)
+  s4 <- plot_prop(prop$prop_herb, "Proportion herbivores", real$prop_herb)
+  s5 <- plot_prop(prop$mean_trop_lvl, "Mean trophic level", real$mean_trop_lvl)
+  s6 <- plot_prop(prop$max_trop_lvl, "Max trophic level", real$max_trop_lvl)
+  s7 <- plot_prop(prop$mean_omn, "Mean omnivory", real$mean_omn)
+  s8 <- plot_prop(prop$sd_gen, "Standard deviation of generalism", real$sd_gen)
+  s9 <- plot_prop(prop$sd_vulner, "Standard deviation of vulnerability", real$sd_vulner)
+  s10 <- plot_prop(prop$diet_sim, "Diet similarity", real$diet_sim)
+  s11 <- plot_prop(prop$mean_path_lt, "Mean path length", real$mean_path_lt)
+  
+  figure <- ggarrange(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11, nrow = 6, ncol=2)
+  name <-  paste(c(web.to.analyse,'_properties.pdf'),collapse = '')
+  annotate_figure(figure, top = "str_prop_confusion_matrix_uninf_prior")
+  ggsave(filename = name, width=9, height=12)
+  
+  ##Web connectivity
+  conn.real.web = format(round(sum(all.web.info$predation.matrix)/dim(all.web.info$predation.matrix)[1]^2, 2), nsmall = 2)
+  model.real.web = format(round(sum(abc.RH.web$web)/dim(all.web.info$predation.matrix)[1]^2, 2), nsmall = 2)
+  
+  
+  pdf(paste(c(web.to.analyse,'_matrix.pdf'),collapse = ''),width=18,height=6)
+  par(mfrow=c(1,3))
+  
+  ##Plot the real food webs
+  Plot.matrix(all.web.info$predation.matrix,title=paste("C",conn.real.web,sep="="))
+  
+  ## Plot the fitted food web matrix
+  Plot.matrix_uncertainty(best.web,title = "Predicted food web_conf_uninfprior")
+  # name_mat = paste(c(web.to.analyse,'_matrix.pdf'),collapse = '')
+  # dev.copy2pdf(file = name_mat,width=8,height=11)
+  dev.off()
+  
+  ## Plotting the parameter distribution
+  p1 <- plott((abc.RH.web$post_dists)$ai,"a_i")
+  p2 <- plott((abc.RH.web$post_dists)$aj, "a_j")
+  p3 <- plott((abc.RH.web$post_dists)$a, "a")
+  p4 <- plott((abc.RH.web$post_dists)$r.b, "r.b")
+  
+  name = paste(c(web.to.analyse,'_distribution.pdf'),collapse = '')
+  figure <- ggarrange(p1,p2,p3,p4)
+  annotate_figure(figure, top = "ss = confusion_matrix_uninf_prior")
+  ggsave(filename = name,width=8,height=8)
+  
+  print(paste(foodweb,"done!"))
+  save(abc.RH.web, file = paste(c(foodweb,".Rdata"),collapse = ''))
+}
+
+
+
+
+# "Broadstone Stream","Broom","Capinteria","Caricaie Lakes","Coachella",
+# "EcoWEB41","EcoWEB60","Grasslands","Mill Stream","Sierra Lakes","Skipwith Pond",
+# "Small Reef","Tuesday Lake","Ythan","Grasslands"
+
+
+
+toc()
+print(paste("Proportion of accepted simulations =", round(N/abc.RH.web$total_sim,3)))
+
+pdf(paste(c(web.to.analyse,'_1_0_corr.pdf'),collapse = ''),width=6,height=6)
+plot(prop.0.corr, prop.1.corr, main = "ss = confusion_matrix_prior = uninf")
+dev.off()
+
+## Plotting distribution of accuracy using confusion matrix
+pdf(paste("accuracy_conf_uninfprior.pdf"),width=9,height=12)
+par(mfrow=c(4,1))
+hist(abc.RH.web$acc_ss, breaks = 50, main = "accuracy_ss = confusion_matrix_prior = uninf", xlab = "confusion matrix")
+hist(abc.RH.web$dummy, breaks = 50, main = "connectance", xlab = "connectance")
+hist(prop.0.corr, breaks = 50)
+hist(prop.1.corr, breaks = 50)
+dev.off()
+
+## Plotting pairwise plot
+pdf(paste("pairwise_conf_uninfprior.pdf"),width=12,height=12)
+pairs(abc.RH.web$post_dists)
+dev.off()
+
+## Plot confusion matrix ss vs connectance
+pdf(paste("conf_vs_conn_uninfprior.pdf"),width=6,height=6)
+plot(abc.RH.web$dummy, abc.RH.web$acc_ss, xlab = "connectance", ylab = "confusion matrix")
+dev.off()

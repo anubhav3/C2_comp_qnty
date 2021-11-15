@@ -1,0 +1,35 @@
+---
+title: "appendix"
+header-includes:
+   - \usepackage{lineno}
+   - \linenumbers
+author: "Anubhav Gupta"
+date: "11/30/2020"
+output: pdf_document
+---
+
+
+## Uncertainty in gut content data
+<!-- The text below is copied from Baker et al 2014 Fish gut content analysis: robust measures of diet composition -->
+
+* The separation of prey items in fish guts can rarely be carried out unambiguously and attempts to do so introduces unquantifiable errors to any measure of prey bulk. Loose tissue amongst partially digested prey remains in the stomach cannot be visually allocated to any prey category with absolute confidence, regardless of how prey categories are defined [@schaferComparisonsInfluenceHabitat2002a]. This is because it may be the remains of separate prey items no longer represented by identifiable parts, or an inseparable mixture of digested tissues from multiple prey items. Consequently, loose tissue allocated to any category other than 'unidentified' potentially adds error to each volume or weight value obtained, meaning the summarized dietary composition unmeasurable and potentially substantial error.
+
+* Even where it is possible to accurately separate prey items in a gut, the actual composition of a gut content in a single point in time is affected by a broad range of unquantifiable factors unrelated to the actual composition of the diet consumed. The sample size of consumers, mechanical prey handling, differential digestion and evacuation rates of different prey types and volumes, and the order of ingestion, combine to provide bulk data that are ambiguous, contain unquantifiable error and are difficult to interpret. 
+
+* 
+
+### Why use stable isotopes?
+
+* Since different tissues integrate diet over different temporal scales, several distinct sources of information can be accesssed from a single sampling event. For example, carbon and nitrogen isotopes were measured in the blood and fur of the red fox Vulpes vulpes and coyote Canis latrans within an agriculture setting in Illinois (Lavin et al., 2003). Blood (the short-term indicator) was used to show a localized habitat effect showing the young fox pups foraging opportunistically around the den, whereas fur (the long-term indicator) provided the necessary temporal period to show that the adult foxes had adjusted their niche width, as a direct response to the additional competition for resources from the coyote. To achieve this insight conventionally would have been practically impos- sible and at the very least require a huge amount of time and sampling effort.
+
+* If the phenology of growth is known, collection of keratinized tissues can provide dietary information from elusive stages of a mammal’s life history, which may otherwise remain unknown (i.e. during months when mammals are away from breeding areas or are difficult to capture). This feature has been used to great effect in understanding mammalian behaviour. For example, researchers have analysed the stable isotope ratios of fur to reveal hoary bat Lasiurus cinereus migration (Cryan et al., 2004); pinniped vibrissae to track temporal shifts in their diets (Hirons, Schell & Finney, 2001); and baleen to track the migrations of whales (Hobson & Schell, 1998).
+
+* Stable isotopic characterization of diet generates a quantitative and continuously distributed variable, which makes for easier statistical analyses and construction of predictive models (Felicetti et al., 2003; Urton & Hobson, 2005; Inger et al., 2006). This becomes a particularly powerful tool when resolving issues of specialized diets (McIlwee & Johnson, 1998; Felicetti et al., 2003), especially useful in cases where the particular significance of scarce protein sources has a direct impact on species conservation. For example, it was known that the endangered Yellowstone grizzly bear Ursus arctos horribilis fed upon the nuts of whitebark pine Pinus albicaulis, itself an increasingly vulnerable species.
+
+### Some caveats of stable isotope approaches
+
+* The most common sources of error include variability in the isotopic fractionation values across different combinations of diets and tissues/species, unquantified temporal or spatial variation in prey isotopic values and variation caused by routing of particular dietary nutrients into particular tissues.
+
+### Solution  to SIR problems
+
+* Sensitivity of model outputs should be assessed by varying diet-tissue fractionation factors

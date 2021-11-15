@@ -1,0 +1,254 @@
+library(cheddar)
+
+## Converts predation matrix into an object which cheddar can use
+mat.to.comm <- function(pred.mat, fw_title){
+  append_n <- function(n){
+    append_n <- paste(c('n',n), collapse='')
+  }
+  
+  dm <- dim(pred.mat)[1]
+  nod <- data.frame(node = sapply(1:dm, append_n), stringsAsFactors = FALSE)
+  prop <- list(title = fw_title)
+  trop <- data.frame(resource = character(), consumer = character())
+  
+  for(i in 1:dm){
+    for(j in 1:dm){
+      if(pred.mat[i,j] == 1){
+        temp <- data.frame(resource = append_n(i), consumer = append_n(j),stringsAsFactors = FALSE)
+        trop = rbind(trop, temp)
+      }
+    }
+  }
+  mat.to.comm <- Community(nod, prop, trop)
+}
+
+fw_prop <- function(foodweb, other, all.web.info){
+  parameters <- foodweb$post_dists
+  M <- all.web.info$species.sizes
+  title <- all.web.info$web.name
+  fw_prop <- data.frame(prop_basal = double(), prop_inter = double(), prop_top = double(),
+                        prop_herb = double(), mean_trop_lvl = double(), max_trop_lvl = double(),
+                        mean_omn = double(), clus_coeff = double(), sd_gen = double(),
+                        sd_vulner = double(), diet_sim = double(), mean_path_lt = double(),
+                        prop.1.corr = double(), prop.0.corr = double())
+  
+  best.EHL1 <- Ratio.allometric.EHL(M=M,
+                                    e=other$e,
+                                    a=parameters$a[1], ai=parameters$ai[1], aj=parameters$aj[1],
+                                    n=other$n, ni=other$ni,
+                                    r.a=other$r.a, r.b=parameters$r.b[1])
+  best.web1 <- Get.web(best.EHL1)
+  community <- mat.to.comm(best.web1, title)
+  
+  prop.1.corr = round(sum(best.web1==1 & all.web.info$predation.matrix==1)/sum(all.web.info$predation.matrix), 2)
+  prop.0.corr = round(sum(best.web1==0 & all.web.info$predation.matrix==0)/
+                        (dim(all.web.info$predation.matrix)[1]^2-sum(all.web.info$predation.matrix)), 2)
+  prop_basal = FractionBasalNodes(community)
+  prop_inter = FractionIntermediateNodes(community)
+  prop_top = FractionTopLevelNodes(community)
+  without_basal <- RemoveNodes(community, BasalNodes(community))
+  prop_herb = length(which(IsBasalNode(without_basal)))/dim(community$nodes)[1]
+  mean_trop_lvl = -999#mean(ShortWeightedTrophicLevel(community))
+  max_trop_lvl = -999#max(ShortWeightedTrophicLevel(community))
+  mean_omn = FractionOmnivorous(community)
+  clus_coeff = -999
+  sd_gen = sd(InDegree(community))
+  sd_vulner = sd(OutDegree(community))
+  
+  community_without_diag <- TrophicSimilarity(community)
+  diag(community_without_diag) <- -999
+  diet_sim = max(community_without_diag)
+  
+  mean_path_lt = mean(ShortestPaths(community))
+  
+  fw_prop <- data.frame(prop_basal = prop_basal, prop_inter = prop_inter, prop_top = prop_top,
+                        prop_herb = prop_herb, mean_trop_lvl = mean_trop_lvl, max_trop_lvl = max_trop_lvl,
+                        mean_omn = mean_omn, clus_coeff = clus_coeff, sd_gen = sd_gen,
+                        sd_vulner = sd_vulner, diet_sim = diet_sim, mean_path_lt = mean_path_lt,
+                        prop.1.corr = prop.1.corr, prop.0.corr = prop.0.corr)
+  
+  N <- dim(parameters)[1]
+  if(N>1){
+    for(i in 2:N)
+    {
+      best.EHL1 <- Ratio.allometric.EHL(M=M,
+                                        e=other$e,
+                                        a=parameters$a[i], ai=parameters$ai[i], aj=parameters$aj[i],
+                                        n=other$n, ni=other$ni,
+                                        r.a=other$r.a, r.b=parameters$r.b[i])
+      best.web2 <- Get.web(best.EHL1)
+      
+      prop.1.corr = round(sum(best.web2==1 & all.web.info$predation.matrix==1)/sum(all.web.info$predation.matrix), 2)
+      prop.0.corr = round(sum(best.web2==0 & all.web.info$predation.matrix==0)/
+                            (dim(all.web.info$predation.matrix)[1]^2-sum(all.web.info$predation.matrix)), 2)
+      community <- mat.to.comm(best.web2, title)
+      
+      prop_basal = FractionBasalNodes(community)
+      prop_inter = FractionIntermediateNodes(community)
+      prop_top = FractionTopLevelNodes(community)
+      without_basal <- RemoveNodes(community, BasalNodes(community))
+      prop_herb = length(which(IsBasalNode(without_basal)))/dim(community$nodes)[1]
+      # print(123)
+      mean_trop_lvl = -999#mean(ShortWeightedTrophicLevel(community))
+      # print(456)
+      max_trop_lvl = -999#max(ShortWeightedTrophicLevel(community))
+      mean_omn = FractionOmnivorous(community)
+      clus_coeff = -999
+      sd_gen = sd(InDegree(community))
+      sd_vulner = sd(OutDegree(community))
+      
+      community_without_diag <- TrophicSimilarity(community)
+      diag(community_without_diag) <- -999
+      diet_sim = max(community_without_diag)
+      
+      mean_path_lt = mean(ShortestPaths(community))
+      
+      fw_temp <- data.frame(prop_basal = prop_basal, prop_inter = prop_inter, prop_top = prop_top,
+                            prop_herb = prop_herb, mean_trop_lvl = mean_trop_lvl, max_trop_lvl = max_trop_lvl,
+                            mean_omn = mean_omn, clus_coeff = clus_coeff, sd_gen = sd_gen,
+                            sd_vulner = sd_vulner, diet_sim = diet_sim, mean_path_lt = mean_path_lt,
+                            prop.1.corr = prop.1.corr, prop.0.corr = prop.0.corr)
+      fw_prop = rbind(fw_prop, fw_temp)
+      best.web1 <- best.web1 + best.web2
+    }
+    fw_prop = list(prop = fw_prop, web = best.web1)
+  }
+  return(fw_prop)
+}
+
+
+real_prop <- function(all.web.info){
+  
+  title <- all.web.info$web.name
+  community <- mat.to.comm(all.web.info$predation.matrix, title)
+  prop_basal = FractionBasalNodes(community)
+  prop_inter = FractionIntermediateNodes(community)
+  prop_top = FractionTopLevelNodes(community)
+  without_basal <- RemoveNodes(community, BasalNodes(community))
+  prop_herb = length(which(IsBasalNode(without_basal)))/dim(community$nodes)[1]
+  mean_trop_lvl = mean(ShortWeightedTrophicLevel(community))
+  max_trop_lvl = max(ShortWeightedTrophicLevel(community))
+  mean_omn = FractionOmnivorous(community)
+  clus_coeff = -999
+  sd_gen = sd(InDegree(community))
+  sd_vulner = sd(OutDegree(community))
+  
+  community_without_diag <- TrophicSimilarity(community)
+  diag(community_without_diag) <- -999
+  diet_sim = max(community_without_diag)
+  
+  mean_path_lt = mean(ShortestPaths(community))
+  
+  real_prop <- data.frame(prop_basal = prop_basal, prop_inter = prop_inter, prop_top = prop_top,
+                        prop_herb = prop_herb, mean_trop_lvl = mean_trop_lvl, max_trop_lvl = max_trop_lvl,
+                        mean_omn = mean_omn, clus_coeff = clus_coeff, sd_gen = sd_gen,
+                        sd_vulner = sd_vulner, diet_sim = diet_sim, mean_path_lt = mean_path_lt)
+}
+
+
+
+
+plot_prop <- function(dd, property, real){
+  dd = data.frame(data = dd)
+  ggplot(dd, aes(x = dd$data, y = ..density..)) +
+    geom_histogram(bins = 50) +
+    geom_vline(xintercept = real, color = "green") + 
+    xlab(property) +
+    ylab("Distribution") 
+}
+
+
+
+
+# s1 <- plot_prop(prop$prop_basal, "Proportion basal", real$prop_basal)
+# s2 <- plot_prop(prop$prop_inter, "Proportion intermediate", real$prop_inter)
+# s3 <- plot_prop(prop$prop_top, "Proportion top", real$prop_top)
+# s4 <- plot_prop(prop$prop_herb, "Proportion herbivores", real$prop_herb)
+# s5 <- plot_prop(prop$mean_trop_lvl, "Mean trophic level", real$mean_trop_lvl)
+# s6 <- plot_prop(prop$max_trop_lvl, "Max trophic level", real$max_trop_lvl)
+# s7 <- plot_prop(prop$mean_omn, "Mean omnivory", real$mean_omn)
+# s8 <- plot_prop(prop$sd_gen, "Standard deviation of generalism", real$sd_gen)
+# s9 <- plot_prop(prop$sd_vulner, "Standard deviation of vulnerability", real$sd_vulner)
+# s10 <- plot_prop(prop$diet_sim, "Diet similarity", real$diet_sim)
+# s11 <- plot_prop(prop$mean_path_lt, "Mean path length", real$mean_path_lt)
+# 
+# ggarrange(s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11, nrow = 6, ncol=2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Top species
+top_species <- function(mat){
+  dm <- dim(mat)[1]
+  for (i in range(1:dm)){
+    mat[i,i] = 0
+  }
+  calc <- rowSums(mat)
+  ind <- which(calc==0)
+  top_species <- length(ind)/dm
+}
+
+## Basal species
+basal_species <- function(mat){
+  dm <- dim(mat)[1]
+  for (i in range(1:dm)){
+    mat[i,i] = 0
+  }
+  calc <- colSums(mat)
+  ind <- which(calc==0)
+  basal_species <- length(ind)/dm
+}
+
+## Basal species list
+basal_species_ind <- function(mat){
+  dm <- dim(mat)[1]
+  for (i in range(1:dm)){
+    mat[i,i] = 0
+  }
+  calc <- colSums(mat)
+  ind <- which(calc==0)
+  return(ind)
+}
+
+## Intermediate species
+intermediate_species <- function(mat){
+  dm <- dim(mat)[1]
+  no <- dm-top_species(mat)-basal_species(mat)
+  intermediate_species <- no/dm
+}
+
+## Proportion of herbivores
+# prop_herb <- function(mat){
+#   basal <- basal_species_ind(mat)
+#   dm <- dim(mat)[1]
+#   for(i in setdiff(dm, basal)){
+#     if(all(mat[,i] == basal)){
+#       
+#     }
+#   }
+# }
+
+# other = data.frame(e=e, n=n, ni=ni, r.a=r.a)

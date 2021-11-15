@@ -1,0 +1,340 @@
+---
+title: 'Effects of data composition and diversity on precision and accuracy
+  of network inference'
+date: "`r format(Sys.time(), '%d %B %Y')`"
+header-includes:
+- \usepackage{lineno}
+- \usepackage{xcolor}
+- \linenumbers
+- \usepackage{textcomp}
+output:
+  pdf_document:
+    fig_caption: yes
+    number_sections: yes
+    toc: yes
+  html_document:
+    df_print: paged
+    toc: yes
+  word_document: null
+indent: true
+mainfont: Times New Roman
+bibliography: ../../references.bib
+---
+
+# Abstract
+
+# Introduction
+
+## Why is knowing trophic interactions important?
+
+Knowledge about the trophic interactions in a food web can be used to answer crucial ecological questions: Which species is a keystone species in a food web [@jordanKeystoneSpeciesFood2009]? How would a food web respond if the top predators are removed [@knightTrophicCascadesEcosystems2005]?  Which species should be given priority when conservation efforts are implemented [@mcdonald-maddenUsingFoodwebTheory2016]? How robust is a food web to extinctions [@dunneNetworkStructureBiodiversity2002]?
+
+
+## What are the methods for knowing interactions?
+
+Species interactions can be inferred from different types of methods (Table \ref{fig:tab_1}) such as gut content analysis [@peralta-maraverStructureDynamicsStability2017], stable isotope ratio analysis of tissues [@laymanCanStableIsotope2007], experimentation [@warrenSpatialTemporalVariation1989] and DNA metabarcoding [@roslinUseDNABarcodes2016]. The types of information extracted from these methods vary. E.g. Gut content analysis of a predator results in the identification of prey species fed upon by that predator, while the stable isotope ratio analysis of the organism's tissue can help us infer the approximate trophic position of that species in the food web. 
+
+
+## Gut content analysis
+
+Gut content analysis is performed to know what an individual has consumed recently. The diet of that individual can be inferred from the items in the stomach. There is considerable uncertainty involved in this method [@bakerFishGutContent2014]. E.g. In fish, there is ambiguity while separating prey items in the gut. There are loose tissues that are not identifiable and cannot be assigned to a specific prey item with certainty. There are factors such as sample size of consumers, mechanical prey handling, differential digestion and evacuation rates of different types of different prey types and volumes, and the ingestion order that in combination result in an unquantifiable error which is difficult to interpret in the predator diet [@hyslopStomachContentsAnalysis1980; @rindorfBiasEstimatingFood2004; @bakerFishGutContent2014].
+
+
+## Stable isotope analysis
+
+Stable isotope composition of a specific element in a consumer's tissue is given by the ratio of a rarer, heavier isotope to a more common lighter isotope [@mccormackUsingStableIsotope2019]. Stable isotope analysis (SIA) of tissues from a single individual can be used to quantify its diet over varying temporal and spatial scales from one sample [@crawfordApplicationsStableIsotope2008]. Using SIA, several different sources of information can be extracted from a single sampling event as different tissues integrate diet over different temporal scales as well as spatial scales. However, there is uncertainty involved in this method which is due to variability in the isotopic fractionation values across multiple combinations of diets and tissues/species, unquantified temporal or spatial variation in prey isotopic values and variation caused by routing of particular dietary nutrients into particular tissues [@crawfordApplicationsStableIsotope2008].
+
+Trophic level of a species $i (TL_i)$ is calculated as:
+
+$TL_i = \frac{\delta^{15}N_i - \delta^{15}N_{base}}{\Delta^{15}N} + TL_{base}$
+
+where $\delta^{15}N_i$ is the $\delta^{15}N$ value of species $i$, and $TL_{base}$ and $\delta^{15}N_{base}$ are known TL and $\delta^{15}N$ values corresponding to a reference baseline species from a given food web. $\Delta^{15}N$ is the trophic fractionation value (usually 3.4%)
+
+<!-- * *Note:* update with a relevant symbol after 3.4  -->
+
+## Why inferring interactions is not easy?
+
+As a food web can be quite complex with many species and trophic interactions [@williamsSimpleRulesYield2000;@berlowSimplePredictionInteraction2009], inferring these trophic interactions with high accuracy and low uncertainty would require large amount of food web data (citreqd). E.g. One would need to sample many individuals for gut content data, and processing these guts require a large amount of effort and time as well. Hence, there needs to be prioritisation of sampling based on an individual trait which is easily identifiable in the field, which would lead to high accuracy in predicting food web with minimal effort.
+
+Even though when one had finally made a decision to use a single type of food web data to infer the species interactions, it might not be practically feasible to infer the complete food web structure from only a single type of food web data. E.g. Stable isotope analysis from tissues can only provide the approximate trophic position of the species which might not be sufficient to predict the complete food web structure. Also, gut content data might only be used to infer partial diet of a predator individual because gut content data only provides the information of the prey individuals that have been foraged by the predator recently. There is also a possibility that some of the information provided by these types of food web data are redundant i.e. taking into account any further food web data does not necessarily increase the food web prediction significantly. E.g. This can happen if the guts of two predator individuals give same information about the prey the predator has consumed.
+
+Gut content data and stable isotope data provide different types of information about a food web on different taxonomic, spatial and temporal scales which results in different amount of uncertainties in inferring the species interactions. E.g. Gut content data provides information about the diet of an individual on a local scale whereas stable isotope provides the information about the diet on a bigger spatial scale which is dependent upon the amount of space dispersed by that species. Therefore, it is crucial to integrate these diverse information simultaneously from these methods so that information from different taxonomic, spatial and temporal scale can be integrated, requiring less sampling effort and resulting in a high accuracy of the food webs.
+
+
+<!-- * Note: Food web properties are highly sensitive to varying levels of sampling effort. -->
+
+<!-- * *Note:* The amount of sampling effort affects how well the food web properties are predicted [@goldwasserSamplingEffectsEstimation1997]. -->
+
+## What we do in our study and how?
+
+These questions are addressed *in silico* by simulating food web networks whose true parameters are known. We used the allometric diet breadth model (ADBM) to simulate the food webs and approximate Bayesian computation (ABC) to parameterise the ADBM. We simulated the food web data which were used to parameterise the ADBM using ABC. We also used real gut content data from Broadstone Stream food web to address those questions. 
+
+<!-- * *Note:* Why did we choose gut content analysis and stable isotope analysis only? -->
+
+<!-- * *Note:* Why ADBM and ABC? -->
+
+<!-- * *Note:* Why body size trait? -->
+
+```{r echo = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+library(readxl)
+library(knitr)
+library(kableExtra)
+fw_table <- read_excel("data_summary_fil.xlsx")
+
+kable(fw_table, format = "latex",
+      caption = "\\label{fig:tab_1}Studies showing the type of data used to infer trophic interactions in a food web",
+      escape = FALSE) %>%
+    kable_styling(latex_options="scale_down")
+
+
+```
+
+# Materials and Methods
+
+Firstly, we present an *in silico* approach (Fig. \ref{fig:fig_m1}) to address the research questions where we simulated food web structure using the allometric diet breadth model (ADBM) whose true parameters were known. In the upcoming sections, we present methods to simulate gut content data and stable isotope ratio data with uncertainty. We vary the amount of simulated data and use partial data to predict food web using the ADBM parameterised via the rejection approximate Bayesian computation (ABC). Secondly, we used a gut content data from an observed Broadstone Stream food web to infer the trophic interactions.
+
+
+<!-- * *Note:* A beautiful figure summarising the food web data types. -->
+
+```{r fig_m1, echo=FALSE, fig.align='center', out.width="400px", fig.cap="\\label{fig:fig_m1} \\textit{In silico} approach for investigating the effect of quantity and composition of food web data in predicting food web structure using the ADBM."}
+knitr::include_graphics("fig/flowchart.png")
+```
+
+<!-- * *Note:* 'in silico' to be in italics in the caption -->
+<!-- * *Note:* Remove direct observation from the flowchart -->
+
+
+## Gut content data simulation
+
+We simulated a food web using the ADBM for a given set of parameters. For a given set of predators, we subset the diet from the simulated food web. Then using a probability mass function (distribution), we sampled the gut content data from predators' diet thereby incorporating the uncertainty in the gut content data. We repeated this process multiple number of times for every predator in the food web.
+
+
+*Input:*
+
+* Predators whose diet are to be simulated $P = \{p_1, \dots, p_n\}$
+
+* A simulated food web $ADBM(\theta_i) = \{d_{p_1}, d_{p_1}, \dots, d_{p_k}\}$, where $d_{p_k}$ is a one-dimensional diet matrix of predator $k$ containing ones and zeros. 
+
+* A function which describes uncertainty in the diet $U(d)$
+
+* Number of independent guts to be simulated for a predator $p_i: ngut$
+
+
+*Sampling:*
+
+
+* for $p_i \in P$
+
+  - for $j = 1, \dots, ngut$, where $ngut$ is the number of guts to be simulated
+  
+    - Simulate a single gut of a predator $p_i: g(p_i) = d_{p_i} *  U(d_{p_i})$
+    
+  - Set of gut of a predator $p_i: G(p_i) = \{ g(p_i) : g(p_i) = d_{p_i}*U(d_{p_i}) \}$
+
+*Output:*
+
+* We simulated a pool of gut content data which contains simulated gut content data $G(p_i)$ for every predator $p_i$
+
+
+## Inferring food web using gut content data
+
+From a pool of gut content data, we draw a set of gut content data randomly. Then we used the rejection ABC to accept a parameter value which would have resulted in the minimum distance, where distance = 1 - True skill statistic and the true skill statistic was computed between the predators' diet predicted from the ADBM and the sampled gut content data. We repeated this process for $n~(= 100)$ number of times for every $i$ number of guts, where $i$ lies between 1 and total number of gut content data in the pool.
+
+
+*Input:*
+
+
+* Predators $P: P = \{p_1, p_2, \dots, p_k \}$
+
+* A pool of gut content data $G: G = \{g_1, g_2, \dots, g_n\}$, where $g_{n}$ is a one-dimensional matrix containing ones and zeros. 
+
+* A model prediction $model(\theta): ADBM(\theta) = \{d_{p_1}, d_{p_1}, \dots, d_{p_k}\}$, where $d_{p_k}$ is a one-dimensional diet matrix of predator $k$ containing ones and zeros. 
+
+* A summary statistic $s(x): s(x) \subseteq model(\theta)$
+
+* A distance function $d(x_i, y) : d(x_i,y) = 1 - TSS(x_i, y)$
+
+* An observed food web $Y: Y = \{d_{p_1}', d_{p_1}', \dots, d_{p_k}'\}$
+
+
+*Sampling:* 
+
+
+for $i = 1, \dots, tgut$ where $tgut$ is the total number of gut content data in the pool $G$
+
+* for $j = 1, \dots, nsample$ where $nsample$ is the number of independent samples to be drawn
+
+  - Draw a set of gut content data $y = \{g_1, g_2, \dots, g_i\}$ from the pool of gut content data $G$
+  
+  - for $k = 1, \dots, npar$ where $npar$ is the number of parameter values to be sampled
+  
+    - Draw a set of parameter values $\theta_k$ from the prior distribution $\pi(\theta)$
+  
+    - Compute the model result $x_i = model(\theta_k)$
+    
+    - Compute $s(x_i)$ and $d(s(x_i), y)$
+    
+  - Accept $\theta_j$, which results in the $min_i\{d(s(x_i), y)\}$
+  
+* Compute $TSS_{i}(x, y) = \{TSS(x_i,y): x_i = ADBM(\theta_j), \theta_j \text{ computed from previous step}\}$ using the accepted $\theta_1, \dots, \theta_{nsample}$
+
+  
+*Output:*
+
+A prediction interval containing $TSS$ between observed and predicted food webs for every $i$ number of gut content data drawn from the pool of gut content data.
+
+
+<!-- ## Stable isotope ratio data simulation -->
+
+
+```{r fig_m2, echo=FALSE, fig.align='center', out.width="400px", fig.cap="\\label{fig:fig_m2} Distribution of proportion of prey in the gut of a predator belonging to a specific size class in the Broadstone Stream food web. The proportion of prey in a predator's gut is calculated as number of unique prey items observed in the predator gut divided by the total number of unique prey items in all the gut of that predator."}
+knitr::include_graphics("../../results/misc/prey_propn_in_gut.png")
+```
+
+
+## Broadstone Stream food web
+
+<!-- * *Note:* Which types of interactions are we interested in? -->
+
+<!-- * *Note:* How was the gut content data collected? -->
+
+<!-- * *Note:* Show the distribution of proportion of prey in the gut content data of Broadstone -->
+
+Broadstone Stream (51$^\circ$ 05' N 0$^\circ$ 03' E; 120 m above sea-level) is a second-order tributary of the River Medway in south-east England. It is dominated by invertebrates as the acidity of the stream (pH 4.7-6.6) excludes fish. The stream consists of 25 common invertebrate species [@woodwardQuantificationResolutionComplex2005]. Among the predators, the three large species are *Cordulegaster boltonii* Donovan, *Sialis fuliginosa* Pict. and *Plectrocnemia conspersa* [Curtis] and the three small species are the larvae of the tanypod midges *Macropelopia nebulosa* [Meigen], *Trissopelopia longimana* [Staeger], and *Zavrelimyia barbatipes* [Kieffer]. Broadstone Stream food web is one of the most completely described food webs for any system [@schmid-arayaImportanceMeiofaunaFood2002; @hildrewChapterSustainedResearch2009; @layerFoodWebStructure2010; and @woodwardQuantificationResolutionComplex2005a].
+
+The Broadstone Stream food web in our study was constructed by aggregating by size [@woodwardIndividualBasedFoodWebs2010] i.e a node is defined as collection of individuals within a specified size range. There were a total of 1008 gut content data. The number of prey items in predator's gut varied within a predator size class (Fig. \ref{fig:fig_m2}). A single gut cannot give information about the complete diet of a predator as can be observed from the right skewed distribution (Fig. \ref{fig:fig_m2}).
+
+
+## Allometric Diet Breadth Model (ADBM)
+
+The allometric diet breadth model (ADBM) is based on optimal foraging theory, specifically the contingency foraging model [@macarthurOptimalUsePatchy1966]. The ADBM predicts the set of prey species a consumer should feed upon to maximise its rate of energy intake [@petcheySizeForagingFood2008]. The foraging variables in the model: energy content of the resources, handling times of the prey, space clearance rate and prey densities are allometrically scaled to the body sizes of the species. 
+
+The model correctly predicted a greater proportion of links when the trophic interactions were more strongly dependent on size [@petcheySizeForagingFood2008]. Indeed, constructing a food web based only on body size (i.e. ignoring taxonomy) resulted in almost twice the number of correctly predicted links, i.e. 83%, in contrast to taxonomy [@woodwardChapterIndividualBasedFood2010]. The goodness of fit of the ADBM's predictions depends on the types of interactions in the food webs [@petcheySizeForagingFood2008], because some of the interactions are more size structured than other interactions. For instance, predacious and aquatic herbivore interations were predicted better than parasitoid and herbivory ones [@petcheySizeForagingFood2008].
+
+
+<!-- ## The Rejection ABC method -->
+
+## Assessment of prediction
+
+The accuracy of the predicted diet of the predators was defined using true skill statistic (TSS) which takes into account the true and false predictions of both the presence and absence of links defined as:
+
+$$ \text{TSS} = \frac{ad-bc}{(a+c)(b+d)} $$ where $a$ is the number of observed links that are predicted by the model (true positives), $d$ is the number of observed absences of links that are correctly predicted (true negatives), $b$ is the number of false positives, and $c$ is the number of false negatives.
+
+The $TSS$ ranges from $-1$ to $1$, where +1 indicates a perfect prediction. A $TSS$ value of zero or less indicates a performance no better than random.
+
+
+# Results
+
+We first present the $\dots$
+
+## Prediction using real gut content data from the Broadstone Stream food web
+
+```{r fig_r1, echo=FALSE, fig.align='center', out.width="400px", fig.cap="\\label{fig:fig_r1} True skill statistics between the predicted and observed Broadstone Stream food web computed for number of different predator guts sampled. There were a total of 1008 guts from 29 species. Line represents the mean and shaded region represents the range/uncertainty. Blue and red curve/region correspond to real and randomly generated gut content data respectively. "}
+knitr::include_graphics("../../results/rejection/Broadstone Stream size_agg_v2/rule_ind/TSS_with_n_pred_prop_n_sel=1.png")
+```
+
+
+The value of true skill statistics between the predicted food web and observed food web saturated quickly with the increasing number of distinct real predator guts (Fig. \ref{fig:fig_r1}). With only 228 real predator guts, the ADBM parameterised with ABC predicted the food web with an accuracy of 90% of the maximum mean TSS (0.71). The uncertainty (red shaded region) in the TSS reduced with the increasing number of predators' guts. Although at a low number of predators' guts the maximum TSS was quite high the uncertainty was high as well. This was quite possibly just by chance which was suggested by the overlap of the TSS region with that of randomly generated gut content data.
+
+<!-- We compared the TSS predicted from real gut content data with randomly generated gut content data. Unsurprisingly, the range/uncertainty of TSS was high and almost remained constant with increasing number of predator guts sampled. The mean TSS fluctuated for lower number of predator guts sampled but eventually became constant, and was close to 0 which suggests the prediction is no better than random. -->
+
+True skill statistics between the predicted food web and the observed food web had a saturating curve with the increasing number of distinct predator guts (Fig. \ref{fig:fig_r3}) for both sets of gut predator guts: First set of gut data consisted of predator body sizes which were smaller than the mean body size and second set of gut data consisted of predator body sizes which were larger than the mean body size. However, the mean TSS corresponding to the guts of predators smaller than the mean body size was higher when compared to that from the guts of predators larger than the mean body size.
+
+<!-- * *Note:* Compare the uncertainty (prediction intervals) between both set of gut data in Fig. \ref{fig:fig_r3}. -->
+
+
+
+```{r fig_r3, echo=FALSE, fig.align='center', out.width="300px", fig.cap="\\label{fig:fig_r3} True skill statistics between predicted food web and observed food web estimated for different number of distinct predator guts. The estimation is done for three sets of gut data: gut content data of predators whose body sizes are smaller than the mean body size, larger than the mean body size, and all the gut content data."}
+knitr::include_graphics("../../results/rejection/Broadstone Stream size_agg_v2/rule_lbs/TSS_with_n_pred_prop.png")
+```
+
+
+## Accuracy of model against accuracy of data
+
+
+```{r fig_r31, echo=FALSE, fig.align='center', out.width="300px", fig.cap="\\label{fig:fig_r31} True skill statistic between predicted food web using ADBM, and observed food web plotted against the true skill statistic between food web constructed using incomplete gut content data, and observed food web."}
+knitr::include_graphics("../../results/misc/TSS_model_vs_data.png")
+```
+
+
+## Mean standardised error in food web properties
+
+```{r fig_r32, echo=FALSE, fig.align='center', out.width="300px", fig.cap="\\label{fig:fig_r32} Mean standardised error for structural food web properties plotted against the number of distinct predator gut content data "}
+knitr::include_graphics("../../results/misc/plot_SE_vs_ngut.png")
+```
+
+
+## Prediction using simulated stable isotope ratio data from a simulated food web
+
+<!-- ```{r fig_r4, echo=FALSE, fig.align='center', out.width="300px", fig.cap="\\label{fig:fig_r4} True skill statistics between predicted food web and observed food web for simulated small reef food web estimated for different number of predator species. For every value in the horizontal axis, there are 100 samples of randomly chosen species from a set of 50 species whose gut content data are simulated."} -->
+<!-- knitr::include_graphics("../../results/rejection/sim_Small Reef/rule_s4/TSS_with_n_pred_prop_s3_s4.png") -->
+<!-- ``` -->
+
+
+## Prediction using both simulated stable isotope ratio and simulated gut content data from a simulated food web
+
+<!-- ```{r, echo=FALSE, fig.align='center', out.width="300px", fig.cap="\\label{fig:fig_r5} True skill statistics between predicted food web and observed food web for simulated small reef food web estimated for different number of predator species. For every value in the horizontal axis, there are 100 samples of randomly chosen species from a set of 50 species whose gut content data are simulated."} -->
+<!-- knitr::include_graphics("../../results/rejection/sim_Small Reef/rule_s_r_1/TSS_with_n_pred_prop.png") -->
+<!-- ``` -->
+
+
+
+
+<!-- ## Cost analysis: TSS vs the amount of money spent on the  -->
+
+# Discussion
+
+## Why did we achieve a higher TSS when we use gut content data for predators less than mean body size?
+
+The predator diets in the observed food web is not nested i.e. the diet of smaller species is not subset of the diet of larger species. When diets of predators with body size lower than mean body size is used to infer the food web, the predicted food web contains the diets of bigger predators as well because the 
+
+
+
+<!-- ## Include digestion in the gut content simulation -->
+
+<!-- ## On generalising ADBM's predictions over all food webs -->
+
+<!-- ## Include other food web data type -->
+
+<!-- * *Note:* experimentation (feeding trials) -->
+
+<!-- * *Note:* DNA Metabarcoding -->
+
+## Extension to other food web models
+
+# Conclusion
+
+# Supplementary Information
+
+## Prediction using simulated gut content data from a simulated food web
+
+```{r fig_r0, echo=FALSE, fig.align='center', out.width="400px", fig.cap="\\label{fig:fig_r0} True skill statistics between predicted food web and observed food web for a simulated small reef food web estimated for distinct predator guts in a sample. The observed simulated food web consists of 50 species and \\dots links. The vertical bars correspond to the prediction intervals of the true skill statistics with filled circles representing the corresponding mean. A prediction interval of the TSS is formed using a set of 100 accepted TSS values using the ABC method."}
+knitr::include_graphics("../../results/rejection/sim_Small Reef/rule_r8/TSS_with_n_pred_prop.png")
+```
+
+
+The true skill statistics (TSS) between the predicted food web and observed food web saturated with an increasing number of distinct predator guts in a sample (Fig. \ref{fig:fig_r0}). The TSS of the predicted food webs estimated using the complete individual gut data had shorter prediction intervals resulting in less uncertainty, and higher mean TSS than that using the partial individual gut data. The maximum limit of the prediction interval of TSS estimated using the complete gut data and the partial gut data were almost equal, with the minimum limit of the prediction interval of TSS using partial gut data being lower than that from the complete gut data. Eventually, the gap between the mean TSS using the partial gut data and the complete gut data reduced with an increasing number of distinct predator guts suggesting when we have enough predator species' gut data, the achieved TSS was almost constant and hence independent of the amount of gut data.
+
+The maximum TSS estimated using the complete gut data was very close to one and almost remained constant with an increasing number of different predator species sampled. With the gut data sample of only five distinct predator species, 95% of the maximum mean TSS was achieved when complete individual gut data was used, while the same was achieved with 15 predator species for partial gut data. This shows that one does not need to know the gut data of all the species to predict the food web and the accuracy is dependent on the completeness of an individual gut data.
+
+
+# References
+
+<!-- # Notes: -->
+
+<!-- ## Stable isotope ratios -->
+
+<!-- * Isotope ratios are reported in parts per thousand  relative to standards, and atmospheric N for nitrogen, and defined in delta notation as -->
+
+<!-- * $\delta^{15}N$ or $\delta^{13}C = (\frac{R_{sample}}{R_{standard}} - 1) * 10^3 $ -->
+
+<!-- * Most commonly a fixed $\Delta^{15}N$ value of 3.4 ppt is used to estimate relative species TP -->
+
+
+
+<!-- # Other notes: -->
+
+<!-- * Audience: Researchers who are interested in food web data collection -->
+
+

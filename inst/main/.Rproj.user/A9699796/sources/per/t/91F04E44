@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1569500947253.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2669331884",
+    "id" : "91F04E44",
+    "lastKnownWriteTime" : 1569506917,
+    "last_content_update" : 1569506917044,
+    "path" : "~/Google Drive/GitHub/Chapter1/analysis_tools/plot_foodweb.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "37,34",
+        "scrollLine" : "4",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
