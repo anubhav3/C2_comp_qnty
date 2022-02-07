@@ -1,5 +1,5 @@
 ---
-title: "Optimal amount of gut content data required to predict trophic interactions using a food web model"
+title: Optimal amount of gut content data required to predict trophic interactions using a food web model
 authors:
 - affiliation: University of Zurich
   department: Department of Evolutionary Biology and Environmental Studies
@@ -17,30 +17,38 @@ authors:
   email: owen.petchey@ieu.uzh.ch
   location: 8057 Zurich, Switzerland
   name: Owen L. Petchey
-bibliography: bibliography.bib
-output:
-  rticles::arxiv_article:
-    keep_tex: yes
-  pdf_document: default
-header-includes:
-  - \usepackage{lineno}
-  - \linenumbers
-  - \usepackage {amsmath}
-  - \setlength\parindent{24pt}
-  - \usepackage{setspace}\doublespacing
-# - \usepackage{setspace}\doublespacing
-keywords:
-- gut content data
-- ADBM
-- food web accuracy
-- food web prediction
-mainfont: Times New Roman
 geometry: margin=1in
-abstract: "1) \n2)  \n3)  \n4)  \n"
+abstract: |
+
+  1)  Presence absence data of species interactions such as gut content data is used to parameterise food web models such as allometric diet  breadth model (ADBM), thereby predicting interactions. And collecting and analysing these data from the field is an expensive and time consuming task. Therefore, it is crucial to know how much gut content data is required to parameterise the ADBM with high accuracy and high precision for a given food web with minimum sampling effort.
+  2)  The novelty of our current approach is that we use approximate Bayesian computation to parameterise the ADBM, and true skill statistics to measure the goodness of fit for different amount of predators' gut content data. 
+  3)  We estimated the minimum number of gut content data required for seven different food webs that resulted in 95% of the maximum true skill statistics achieved by the ADBM for total gut content data. We found that incomplete gut content data can be used to parameterise the ADBM with the lowest amount of gut content data being 28% of the total gut content data.
+  4)  These results suggest that one need not collect a large quantity of gut content data to predict a food web structure using a food web model, thereby reducing sampling effort considerably.
+
+keywords:
+  - gut content data
+  - ADBM
+  - food web accuracy
+  - food web prediction
+header-includes:
+   - \usepackage{lineno}
+   - \linenumbers
+   - \usepackage {amsmath}
+   - \setlength\parindent{24pt}
+   - \usepackage{setspace}\doublespacing
+# indent: true
+mainfont: Times New Roman
+bibliography: bibliography.bib
+biblio-style: biblatex
+output:
+  # word_document:
+  #   fig_caption: yes
+  #   number_sections: yes
+  rticles::arxiv_article:
+    keep_tex: true
 ---
 
-
-**OP: For my comments, please search for "**OP:"
+\*\*AG: My comment starts with "**AG:"
 
 # Alternate titles
 
@@ -52,15 +60,15 @@ abstract: "1) \n2)  \n3)  \n4)  \n"
 
 Knowledge about the trophic interactions in a food web is crucial in ecology for purposes ranging from identifying keystone species [@jordanKeystoneSpeciesFood2009] to quantifying robustness of a food web to species extinctions [@dunneNetworkStructureBiodiversity2002]. This has led to the development of numerous food web models [@allesinaGeneralModelFood2008; @cohenStochasticTheoryCommunity1985; @gravelInferringFoodWeb2013; @petcheySizeForagingFood2008; @tamaddoni-nezhadConstructionValidationFood2013]. Along with inferring missing links in an observed food web, the food web models are also used for ecological forecasting [@hattabForecastingFinescaleChanges2016; @lindegrenEcologicalForecastingClimate2010] and for understanding the underlying mechanism governing the interactions in a food web [@ogormanSimpleModelPredicts2019].
 
-Although food web models are constructed using prior theory about the factors that determine trophic interactions, empirical data about interactions is required to parameterise a model. For example, @petcheySizeForagingFood2008 used presence-absence information about trophic interactions to parameterise the allometric diet breadth model and thereby predict species interactions. Empirical information about interactions can be inferred from diverse set of methods such as gut content analysis [@peralta-maraverStructureDynamicsStability2017], stable isotope ratio analysis of tissues [@laymanCanStableIsotope2007], experimentation [@warrenSpatialTemporalVariation1989], DNA metabarcoding [@roslinUseDNABarcodes2016] and literature research [@grayJoiningDotsAutomated2015; @cohenSoilInvertebratesChemistry2014; @goldwasserConstructionAnalysisLarge1993a].
+Although food web models are constructed using prior theory about the factors that determine trophic interactions, empirical data about interactions is required to parameterise a model. For example, @petcheySizeForagingFood2008 used presence-absence information about trophic interactions to parameterise the allometric diet breadth model and thereby predict species interactions. These empirical information about interactions can be inferred from diverse set of methods such as gut content analysis [@peralta-maraverStructureDynamicsStability2017], stable isotope ratio analysis of tissues [@laymanCanStableIsotope2007], experimentation [@warrenSpatialTemporalVariation1989], DNA metabarcoding [@roslinUseDNABarcodes2016] and literature research [@grayJoiningDotsAutomated2015; @cohenSoilInvertebratesChemistry2014; @goldwasserConstructionAnalysisLarge1993a].
 
-**OP: The following three sentences may not be necessary here, or could perhaps go elsewhere.** All of these methods can provide information useful to infer the diet of a consumer, however different methods can result in different levels of uncertainty in the inferred diet (citreqd). A single gut content of a predator describes what that individual has consumed recently which can be used to infer the diet of the predator [@eitzingerTestingValidityFunctional2018; @omalleyEffectsFoodWeb2017; @dixonAssessingDietNorth2017; @mcclain-countsTrophicStructureMesopelagic2017b; @peralta-maraverStructureDynamicsStability2017]. Stable isotope data when combined with mixing models can be used to determine which prey items are most likely fed upon by a predator [@kadoyaIsoWebBayesianIsotope2012; @crawfordApplicationsStableIsotope2008].
+<!-- **OP: The following three sentences may not be necessary here, or could perhaps go elsewhere.** All of these methods can provide information useful to infer the diet of a consumer, however different methods can result in different levels of uncertainty in the inferred diet (citreqd). A single gut content of a predator describes what that individual has consumed recently which can be used to infer the diet of the predator [@eitzingerTestingValidityFunctional2018; @omalleyEffectsFoodWeb2017; @dixonAssessingDietNorth2017; @mcclain-countsTrophicStructureMesopelagic2017b; @peralta-maraverStructureDynamicsStability2017]. Stable isotope data when combined with mixing models can be used to determine which prey items are most likely fed upon by a predator [@kadoyaIsoWebBayesianIsotope2012; @crawfordApplicationsStableIsotope2008]. -->
 
-**There should be I think, a paragraph that transition from the many methods mentioned just above, to the focus on the gut content method, which should mention, for example, some of the advantages (and possibly disadvantages) of the gut content method.
+Food web methods mentioned above have multiple shortcomings. Stable isotope ratio analysis of the organism's tissue does not give a direct information of the diet of that organism but rather approximate trophic position of that species in the food web. Although mixing models can be used to determine what prey items are most likely fed upon by a predator but this results in uncertainty in the estimates [@kadoyaIsoWebBayesianIsotope2012; @crawfordApplicationsStableIsotope2008]. Experimentation (e.g. feeding trials) may create unrealistic conditions where a predator is confined in a small space with a potential "prey" and is effectively "forced" into eating it (citreqd). DNA metabarcoding could have many issues such as failure to relate OTUs to species, or inability to distinguish secondary predation, i.e. the DNA signature of the prey consumed by the prey consumed by the primary item found in the predator's gut. Another approach to infer missing links is literature research which involves assuming that a link will occur because another author described it in some other system, or for related predator/prey species, e.g. from the same genus or family [@grayJoiningDotsAutomated2015; @cohen2014; @goldwasser1993]. This typically results in a food web that will be very oversampled with false positives in the presence of links (citreqd). @nielsen2018 have shown that gut content analysis method has a better match with real diet when compared to other methods. \*\*AG: Working on this paragraph.
 
-Acquiring food web data from gut content analysis is time consuming and expensive (reference). In part this is due to the need for many gut contents to be collected and analysed in order to be confident that the majority of possible trophic links have been observed.  Furthermore, considerable time, resource investment, and expertise is required to process the collected samples. Hence, there is of considerable importance to know the minimum number of gut contents and of which consumer species that are required to parameterise a food web model with high accuracy and high precision, so that one knows when is a good time to stop collecting any further empirical data on the food web.
+Acquiring food web data from gut content analysis is time consuming and expensive (reference). In part this is due to the need for many gut contents to be collected and analysed in order to be confident that the majority of possible trophic links have been observed. Furthermore, considerable time, resource investment, and expertise is required to process the collected samples. Hence, there is of considerable importance to know the minimum number of gut contents and of which consumer species that are required to parameterise a food web model with high accuracy and high precision, so that one knows when is a good time to stop collecting any further empirical data on the food web.
 
-Therefore, the key question we are interested in answering is how much presence-absence information, in the form of gut content data, is required to infer food web structure from a food web model with high accuracy and high precision. In other words, in case of gut content data how many samples of gut content should one collect from the field to parameterise a food web model? To answer this question, we use the presence-absence information from gut content data, and allometric diet breadth model (ADBM) to predict trophic interactions. We parameterise the model using approximate Bayesian computation/rejection Monte Carlo sampling. **OP: A more complete, though still very brief description of what we do, is important to add here.**
+Therefore, the key question we are interested in answering is how much presence-absence information, in the form of gut content data, is required to infer food web structure from a food web model specifically the ADBM with high accuracy and high precision. In other words, how many samples of gut content should one collect from the field to parameterise a food web model? To answer this question, we use the presence-absence information from gut content data to parameterise the allometric diet breadth model (ADBM) thereby predicting trophic interactions in seven different food webs using rejection approximate Bayesian computation, where the fitness of the model was measured using true skill statistics. We computed the true skill statistics of the predicted food webs for different number of predator guts to calculate the minimum number of gut content data to infer food web structure. Our study provides a guideline on how many gut content data is required to predict food web structure using a food web model.
 
 ```{r echo = FALSE, warning = FALSE}
 # options(knitr.kable.NA = '')
@@ -79,53 +87,65 @@ Therefore, the key question we are interested in answering is how much presence-
 
 # Materials and Methods
 
-In the upcoming sections, we present the allometric diet breadth model (ADBM) and the gut content data used to infer trophic interactions. We also give a detailed account of using partial gut content data to parameterise the ADBM using approximate Bayesian computation (ABC). We assessed model predictions using the true skill statistic and various structural food web properties for comparison across food webs.
+In the upcoming sections, we present the food webs, the allometric diet breadth model (ADBM) and the gut content data used to infer the trophic interactions in the presented food webs using the ADBM. We also give a detailed account of using partial gut content data to parameterise the ADBM using rejection approximate Bayesian computation (ABC). We assessed model predictions using the true skill statistic and various structural food web properties for comparison across food webs.
 
 ## The Empirical Food Webs
 
-*OP: Here state what criteria were used to select the empirical food webs that are used in this study.
+In our study, we used food webs for which gut content data is available at an individual level and, is FAIR. Presence and absence interactions of food web data can be aggregated in different ways [@gilljamSeeingDouble2011]. A common way of aggregating food web data is the taxonomic approach, in which nodes in the food web are taxa (e.g. species) and one species is said to feed on another species if at least one individual of the latter is found in at least one gut of the former. Another approach is based on size, rather than taxonomy, and in this the nodes in the food web are size classes. Here, a feeding link occurs between two size classes if at least one prey item within a size class was found in the gut of another size class, irrespective of their taxonomy.
 
-Presence and absence interactions of food web data can be aggregated in different ways [@gilljamSeeingDouble2011]. A common way of aggregating food web data is the taxonomic approach, in which nodes in the food web are taxa (e.g. species) and one species is said to feed on another species if at least one individual of the latter is found in at least one gut of the former. Another approach is based on size, rather than taxonomy, and in this the nodes in the food web are size classes. Here, a feeding link occurs between two size classes if at least one prey item within a size class was found in the gut of another size class, irrespective of their taxonomy. In our study, we aggregate the food web on the basis of size class **OP: state why! In general here and in any methods section, when we state what we did, we must state why... i.e. we must justify our choices.**
+In our study, we aggregate the gut content data on the basis of size class because the food webs constructed using this approach were better predicted by the ADBM compared to the taxonomic approach [@woodward2010], and this is because the ADBM is based on foraging rules defined using the body sizes of organisms [@petcheySizeForagingFood2008].
 
-### Broadstone Stream
+Our study is based on the assumption that the food web constructed using the complete gut content data is the true food web. However, this might not be the case because the links are still under-sampled for many nodes [@woodwardIndividualBasedFoodWebs2010]. This could result in a lower TSS of the predicted food web from the ADBM which can result in a biased estimate of the number of gut content data.
 
-Broadstone Stream (51$^\circ$ 05' N 0$^\circ$ 03' E; 120 m above sea-level) is a second-order tributary of the River Medway in south-east England. It is dominated by invertebrates as the acidity of the stream (pH 4.7-6.6) excludes fish. The stream consists of 25 common invertebrate species [@woodwardQuantificationResolutionComplex2005]. Among the predators, the three large species are *Cordulegaster boltonii* Donovan, *Sialis fuliginosa* Pict. and *Plectrocnemia conspersa* [Curtis] and the three small species are the larvae of the tanypod midges *Macropelopia nebulosa* [Meigen], *Trissopelopia longimana* [Staeger], and *Zavrelimyia barbatipes* [Kieffer]. Broadstone Stream food web is one of the most completely described food webs available for any system [@schmid-arayaImportanceMeiofaunaFood2002; @hildrewChapterSustainedResearch2009; @layerFoodWebStructure2010; and @woodwardQuantificationResolutionComplex2005a].
+```{r echo=FALSE, warning=FALSE}
+library(readxl)
+library(knitr)
+library(kableExtra)
+fw_table <- read_excel("../table/fw_table.xlsx")
+kable(fw_table, format = "latex",
+      caption = "\\label{fig:tab_1}Information about the empirical food webs. **AG: Working on this.", escape = FALSE, align = "l") %>%
+  kable_styling(font_size = 7, latex_options="scale_down", row_label_position = 1) %>%
+  landscape(margin = "1cm") %>%
+  column_spec(1, width = "3cm") %>%
+  column_spec(2, width = "8em") %>%
+  column_spec(7, width = "8em") %>%
+  column_spec(8, width = "8em") %>%
+  column_spec(9, width = "8em")
+  
+  
+```
 
+<!-- ### Broadstone Stream -->
 
-### Celtic Sea
+<!-- Broadstone Stream (51$^\circ$ 05' N 0$^\circ$ 03' E; 120 m above sea-level) is a second-order tributary of the River Medway in south-east England. It is dominated by invertebrates as the acidity of the stream (pH 4.7-6.6) excludes fish. The stream consists of 25 common invertebrate species [@woodwardQuantificationResolutionComplex2005]. Among the predators, the three large species are *Cordulegaster boltonii* Donovan, *Sialis fuliginosa* Pict. and *Plectrocnemia conspersa* [Curtis] and the three small species are the larvae of the tanypod midges *Macropelopia nebulosa* [Meigen], *Trissopelopia longimana* [Staeger], and *Zavrelimyia barbatipes* [Kieffer]. Broadstone Stream food web is one of the most completely described food webs available for any system [@schmid-arayaImportanceMeiofaunaFood2002; @hildrewChapterSustainedResearch2009; @layerFoodWebStructure2010; and @woodwardQuantificationResolutionComplex2005a]. -->
 
-The Celtic Sea is an area of continental shelf bordered by Ireland, the UK and the Bay of Biscay. Precise sampling locations and dates were not given in the Barnes et al. (2008) dataset, from where the data used in this chapter were extracted, so we pooled data over the whole time period and locations to capture general patterns. Only locations consistently sampled through the 1987--2001 time series were used (Blanchard et al., 2005). The feeding links of fishes in the Celtic Sea have been described in a published global dataset of individual predator and prey body sizes and taxonomy (Barnes et al., 2008): in total, 1988 feeding events from 29 predator species were included in the food web presented here. The original stomach contents data were collected from dissections carried out on board research vessels during the annual surveys carried out by the Centre for Environment, Fisheries and Aquaculture Science (Cefas) (Pinnegar et al., 2003). Predator and prey length were recorded and converted to body mass by Barnes et al. (2008) using published regression equations. Only vertebrate prey were identified and measured, with the vast majority being identified to species.
+<!-- ### Celtic Sea -->
 
-### Afon Hirnant
+<!-- The Celtic Sea is an area of continental shelf bordered by Ireland, the UK and the Bay of Biscay. Precise sampling locations and dates were not given in the Barnes et al. (2008) dataset, from where the data used in this chapter were extracted, so we pooled data over the whole time period and locations to capture general patterns. Only locations consistently sampled through the 1987--2001 time series were used (Blanchard et al., 2005). The feeding links of fishes in the Celtic Sea have been described in a published global dataset of individual predator and prey body sizes and taxonomy (Barnes et al., 2008): in total, 1988 feeding events from 29 predator species were included in the food web presented here. The original stomach contents data were collected from dissections carried out on board research vessels during the annual surveys carried out by the Centre for Environment, Fisheries and Aquaculture Science (Cefas) (Pinnegar et al., 2003). Predator and prey length were recorded and converted to body mass by Barnes et al. (2008) using published regression equations. Only vertebrate prey were identified and measured, with the vast majority being identified to species. -->
 
-The Afon Hirnant is a tributary of the Welsh Dee in North Wales, U.K. (52$^\circ$ 52'N 03$^\circ$ 34) with the study being conducted at three sites. The pH within each site ranged from about 5.5 to 7 over the course of the year. A total of 180 invertebrate samples were collected for the whole sampling periods. All individuals within the benthic samples were counted and identified to the lowest possible taxonomic level (usually species). Prey items were identified using a combination of taxonomic keys and reference slides of previously identified species, after @schmid-arayaConnectanceStreamFood2002; @schmid-arayaImportanceMeiofaunaFood2002.
+<!-- ### Afon Hirnant -->
 
-### Tadnoll Brook
+<!-- The Afon Hirnant is a tributary of the Welsh Dee in North Wales, U.K. (52$^\circ$ 52'N 03$^\circ$ 34) with the study being conducted at three sites. The pH within each site ranged from about 5.5 to 7 over the course of the year. A total of 180 invertebrate samples were collected for the whole sampling periods. All individuals within the benthic samples were counted and identified to the lowest possible taxonomic level (usually species). Prey items were identified using a combination of taxonomic keys and reference slides of previously identified species, after @schmid-arayaConnectanceStreamFood2002; @schmid-arayaImportanceMeiofaunaFood2002. -->
 
-Description of Tadnoll Brook here
+<!-- ### Tadnoll Brook -->
 
-### Coilaco
+<!-- Description of Tadnoll Brook here -->
 
-Description of Coilaco here
+<!-- ### Coilaco -->
 
-### Guampoe
+<!-- Description of Coilaco here -->
 
-Description of Guampoe here
+<!-- ### Guampoe -->
 
-### Trancura
+<!-- Description of Guampoe here -->
 
-Description of Trancura here
+<!-- ### Trancura -->
 
-## Food web construction
-
-
+<!-- Description of Trancura here -->
 
 ## Allometric Diet Breadth Model (ADBM)
 
-**OP: In this section there must be justification of why this food web model in particular was used, and why not others.**
-
-The allometric diet breadth model (ADBM) is based on optimal foraging theory, specifically the contingency foraging model [@macarthurOptimalUsePatchy1966]. The ADBM predicts the set of prey species a consumer should feed upon to maximise its rate of energy intake [@petcheySizeForagingFood2008]. The foraging variables in the model are: energy content of the resources, handling times of the prey, space clearance rate and prey densities are allometrically scaled to the body sizes of the species. **OP: please complete -> Further details can be found...
-
+The allometric diet breadth model (ADBM) is based on optimal foraging theory, specifically the contingency foraging model [@macarthurOptimalUsePatchy1966]. We chose this model because it uses the body size of organisms as input to predict feeding interactions. The ADBM predicts the set of prey species a consumer should feed upon to maximise its rate of energy intake [@petcheySizeForagingFood2008]. The foraging variables in the model are: energy content of the resources, handling times of the prey, space clearance rate and prey densities are allometrically scaled to the body sizes of the species. Further details on the foraging rules defined in the ADBM and ADBM's predictive power across different food webs can be found in @petcheySizeForagingFood2008.
 
 ## Assessment of prediction
 
@@ -139,7 +159,7 @@ The $TSS$ ranges from $-1$ to $1$, where +1 indicates a perfect prediction. A $T
 
 From an empirical dataset of gut content data, we draw a set of gut contents data randomly to create a partial gut content dataset. We then fit the ADBM to this partial dataset.
 
-To fit the ADBM to a gut content dataset (be it complete or partial), we used the method we previously developed (**OP: citation). rejection ABC to accept a parameter value from a prior distribution which would have resulted in the minimum distance, where distance = 1 - True skill statistic. The true skill statistic was computed between the predators' diet predicted from the ADBM, and that from the sampled gut content data. We repeated this process for $n~(= 100)$ number of times for every $i$ number of guts, where $i$ lies between 1 and total number of gut content data in the pool.
+To fit the ADBM to a gut content dataset (be it complete or partial), we used the rejection ABC method we previously developed in @gupta2021 to accept a parameter value from a prior distribution which would have resulted in the minimum distance, where distance = 1 - True skill statistic. The true skill statistic was computed between the predators' diet predicted from the ADBM, and that from the sampled gut content data. We repeated this process for $n~(= 100)$ number of times for every $i$ number of guts, where $i$ lies between 1 and total number of gut content data in the pool.
 
 *Input:*
 
@@ -181,7 +201,7 @@ The $TSS$ between observed and predicted food webs for every $i$ number of gut c
 
 # Results
 
-We first present how the accuracy of the food web model vary in predicting trophic interactions when we increase the amount the gut content data provided to the food web model. Then, we calculate the number of gut content data for each food webs corresponding to which the accuracy results in 90% of the maximum true skill statistics predicted by the food web model. We also compute the goodness of the food web model in predicting structural properties from incomplete gut content data. We did that by computing mean standardised error in food web properties.
+We first present how the accuracy of the food web model i.e ADBM vary in predicting trophic interactions with increasing amount of gut content data provided to the food web model. Then, we calculate the number of gut content data for each food webs that results in accuracy equal to 95% of the maximum true skill statistics predicted by the food web model. We also compute the goodness of the food web model in predicting structural properties from incomplete gut content data. We did that by computing mean standardised error in food web properties.
 
 ## Inferring trophic interactions using ADBM and incomplete gut content data
 
@@ -189,77 +209,109 @@ We first present how the accuracy of the food web model vary in predicting troph
 knitr::include_graphics("../../results/misc/plot_TSS_ratio.png")
 ```
 
-The true skill statistics of the food webs predicted by the ADBM using subsets of gut content data improved quickly for lower number of predator guts (Fig. \ref{fig:fig_ra}) (a, c, e, g, i, k, m). The prediction interval of the true skill statistics reduced with the increasing number of predator guts with the mean TSS asymptoting to the maximum mean TSS achieved by the ADBM when all the gut content data was used. Although the maximum TSS varied among the food webs, the qualitative increase in the TSS was the same.
+The true skill statistics of the food webs predicted by the ADBM using subsets of gut content data improved quickly for lower number of predator guts (Fig. \ref{fig:fig_ra}) (a, c, e, g, i, k, m). The prediction interval of the true skill statistics decreased with increasing number of predator guts with the mean TSS asymptoting to the maximum mean TSS achieved by the ADBM when all the gut content data was used. Although the maximum TSS varied among the food webs, the qualitative increase in the TSS was the same.
 
-For a low number of predator guts, the TSS of the model predicted food web was higher compared to the TSS of the food web constructed from gut content data (Fig. \ref{fig:fig_ra} (b, d, f, h, j, l, n)) **OP: leave the following type of content for the Discussion section: recommending when a model can be used to compensate for undersampled links. After a certain increase in the number of predator guts, the ratio TSS(Model)/TSS(data) reduced to less than one, and reduced further gradually.
+For Broadstone Stream food web, with only 381 number of gut content data which is 38% of the total gut content data, the ADBM predicted the food web with the TSS of 0.74 which was 95% of the mean TSS (0.78) achieved using complete gut content data by the ADBM (Fig. \ref{fig:fig_ra}(a)). In case of the Celtic Sea food web, only 171 gut content data which is 35% of the total gut content data was required by the ADBM to predict food web with TSS equal to 95% of the mean TSS (0.68) achieved using complete gut content data by the ADBM (Fig. \ref{fig:fig_ra}(c)).
 
-For Broadstone Stream food web, with only 381 number of gut content data which is 38% of the total gut content data, the ADBM predicted the food web with TSS of 0.74 which was 95% of the mean TSS (0.78) achieved using complete gut content data by the ADBM  (Fig. \ref{fig:fig_ra}(a)). In the case of the Celtic Sea food web, only 171 gut content data (**OP: state what percentage this is) was required by the ADBM to predict food web with TSS equal to 95% of the mean TSS (0.68) achieved using complete gut content data by the ADBM (Fig. \ref{fig:fig_ra}(c)).
+## TSS(Model)/TSS(Data) for different food webs
+
+For a low number of predator guts, the TSS of the model predicted food web was higher than the TSS of the food web constructed from gut content data only (Fig. \ref{fig:fig_ra} (b, d, f, h, j, l, n)). After a certain increase in the number of predator guts, the ratio TSS(Model)/TSS(data) reduced to less than one, and reduced further gradually.
+
+## Mean standardised error in structural properties with respect to the number of gut content data
+
+Mean standardised error in structural properties of afon hirnant, broadstone stream, celtic sea and tadnoll brook food web reduced drastically with increasing number of predator gut content data at low number of predator gut content data (Fig. \ref{fig:fig_rab}). In case of Broadstone Stream food web, the 95% prediction interval reduced as well with increasing number of predator gut content data. 
+
+\*\*AG: Working on this paragraph.
+
+```{r, echo=FALSE, fig.align='center', out.width="500px", fig.cap="\\label{fig:fig_rab} Mean standardised error in structural properties of different food webs with respect to the number of gut content data."}
+knitr::include_graphics("../../results/misc/plot_mse_ngut_all.png")
+```
 
 ## Dependence of minimum gut content data on number of species, links and connectance
 
-**OP: "There seems to be" is rather unconvential phrase. Perhaps use There was a positive trend between number of minimum gut content data and number of species (S) (Fig. \ref{fig:fig_rb} (a)), links (L) (Fig. \ref{fig:fig_rb} (c)), connectance (C) (Fig. \ref{fig:fig_rb} (d)) and number of predator nodes (Fig. \ref{fig:fig_rb} (e)), with Broadstone Stream being an outlier in Fig. \ref{fig:fig_rb} (a, c, e). The number of minimum gut content data increases with number of maximum gut content data sampled (Fig. \ref{fig:fig_rb} (b)). There seems to be a negative relationship between proportion of minimum gut (= Number of minimum gut / Number of maximum guts sampled) and number of species (S) (Fig. \ref{fig:fig_rb} (f)), links (L) (Fig. \ref{fig:fig_rb} (g)), connectance (C) (Fig. \ref{fig:fig_rb} (h)).
+There was a positive trend between number of minimum gut content data and number of species (S) (Fig. \ref{fig:fig_rb} (a)), links (L) (Fig. \ref{fig:fig_rb} (c)), connectance (C) (Fig. \ref{fig:fig_rb} (d)) and number of predator nodes (Fig. \ref{fig:fig_rb} (e)), with Broadstone Stream being an outlier in Fig. \ref{fig:fig_rb} (a, c, e). The number of minimum gut content data increases with number of maximum gut content data sampled (Fig. \ref{fig:fig_rb} (b)). There seems to be a negative relationship between proportion of minimum gut (= Number of minimum gut / Number of maximum guts sampled) and number of species (S) (Fig. \ref{fig:fig_rb} (f)), links (L) (Fig. \ref{fig:fig_rb} (g)), connectance (C) (Fig. \ref{fig:fig_rb} (h)).
 
 ```{r echo=FALSE, fig.align='center', out.width="500px", fig.cap="\\label{fig:fig_rb} (a, b, c, d, e) Number of minimum gut content data plotted against number of species (S), number of maximum guts sampled, number of links (L), connectance (C) and number of predator nodes respectively. (f, g, h) Proportion of minimum gut content data plotted against number of species (S), number of links (L) and connectance (C) respectively."}
 knitr::include_graphics("../../results/misc/plot_min_gut_vs_X.png")
 ```
 
-```{r echo=FALSE, fig.align='center', out.width="500px", fig.cap="\\label{fig:fig_rc} True skill statistics of the food web constructed using gut content data plotted against number of gut content data."}
-knitr::include_graphics("../../results/misc/plot_empTSS_ngut.png")
+```{r echo=FALSE, fig.align='center', out.width="500px", fig.cap="\\label{fig:fig_rc} Link accumulation curve of the food web constructed using gut content data plotted against number of gut content data."}
+knitr::include_graphics("../../results/misc/plot_emplinks_ngut.png")
 ```
 
 # Discussion
 
-<!-- We have demonstrated how a food web model can be used to predict food web in the availability of incomplete data. At lower amount of gut content data, ADBM is quite better at predicting trophic interactions. We also compute the upper limit of amount of gut content data till when it is advantageous to use the ADBM. This can help us decide how much gut content data to actually collect when we are using a food web model to infer trophic interactions. -->
+We have demonstrated how a food web model can be used to predict food web in the availability of incomplete data. At lower amount of gut content data, ADBM is quite better at predicting trophic interactions. We have computed the upper limit of amount of gut content data till when it can be used to compensate for undersampling. This can help us decide how much gut content data to actually collect when we are using a food web model to infer trophic interactions. A future development could be to use this our approach on other food web models, and to also use food web data other than gut content data to parameterise those models.
+
+
+## Why incomplete gut content data can be used to infer trophic interactions?
+
+In all of the seven food webs, the ADBM was able to infer the trophic interactions using incomplete gut content data because the presence absence information from the gut content data was used to narrow down the possible model parameter values of the ADBM that best explained the predators' diets. Although in theory the ADBM can predict trophic interactions using only body sizes of organisms as it is based on set of foraging rule, it still requires some presence absence data to constrain the posterior parameter space thereby making more accurate predictions.
+
+## Why does the minimum gut data differ among food webs?
+
+We found the minimum number of gut content data to vary across food webs and this could be due to the possibility that the food webs are sampled differently i.e. some food webs are well sampled than others (Fig. \ref{fig:fig_rc}). Since some food webs are more size-structured than others, they are well predicted by the ADBM and therefore might require a lower number of gut content data for model parameterisation. 
+\*\*:AG: I would need to add information about the interactions in these food webs.
+
+## Model fills up missing interactions and guide sampling direction
+
+When only few presence absence data is available, model can be used to fill up the missing interactions that has not been observed in the gut content data. Also model's predictions can be used as a guide to sample predator guts that might be significant in the food web.
+
+## Why is model's TSS less than one?
+
+Due to limitations of the ADBM as to not able to completely explain the interactions in a food webs using the foraging rules based on the body size and also possible undersampling in the observed data because of missing rare links, the ADBM's maximum predicted true skill statistics is always less than one.
+
+The maximum predictive power of a model is constrained by the rules it is based on. In the case of ADBM, that limits the predictive power of the ADBM is that it can only predict diets that are contiguous with respect to the size of prey. I.e. it cannot predict that a predator with consume prey of size 1 and 3, and not prey of size 2. Also, it is important to note that if the observed diets are not contiguous when prey are ordered by their size, the estimation process could lead to a lower value of the TSS.
+
+
+## TSS(Model)/TSS(Data) for different food webs
+
+\*\*AG: Working on this.
 
 ## Why Broadstone Stream is an outlier?
 
-Broadstone Stream is the most sampled food web compared to all the other food webs (Fig. \ref{fig:fig_rc}), which means the observed Broadstone Stream food web might be more accurate compared to others.
+Broadstone Stream is the most sampled food web compared to all the other food webs (Fig. \ref{fig:fig_rc}), which means the observed Broadstone Stream food web might be more accurate compared to others. 
 
-**OP: Focus on this... ## Why incomplete gut content data can be used to infer trophic interactions?
+\*\*AG: Working on this, not sure if this paragraph is needed.
 
--   Model fills up the missing interactions
 
--   Partial data helps to constrain the parameter space
+## Propagating uncertainty from gut content data to model's predictions
 
-<!-- Food web model is set of rules based on ecological theory which defines trophic interactions in a food web. A food web model does better in predicting trophic interactions provided the trophic interactions in an ecosystem is governed by these rules.  -->
-
-**OP Focus on this, at least in the context of further work that could be done. ## There is uncertainty in gut content data and needs to be propagated into model's predictions
+\*\*OP Focus on this, at least in the context of further work that could be done. ## There is uncertainty in gut content data and needs to be propagated into model's predictions
 
 There is considerable uncertainty involved in gut content analysis [@bakerFishGutContent2014] such as in fish's guts, there are sometimes loose tissues that are not identifiable and cannot be assigned to a specific prey item with certainty. There are factors such as sample size of consumers, mechanical prey handling, differential digestion and evacuation rates of different prey types and volumes, and the ingestion order that in combination result in an unquantifiable error which is difficult to interpret in the predator diet [@hyslopStomachContentsAnalysis1980; @rindorfBiasEstimatingFood2004; @bakerFishGutContent2014]. Therefore, a future development would be to consider how this uncertainty is propagated into food web prediction.
 
-**OP: Focus on this, and other studies that have looked at the importance of quantity and quality of food web data ## Comparing our study with other studies of predicting food webs using incomplete data
+## Comparing our study with other studies of predicting food webs using incomplete data
 
-Some studies have presented how the accuracy of food web prediction change when we vary the amount of food web data [@grayJoiningDotsAutomated2015].
+\*\*OP: Focus on this, and other studies that have looked at the importance of quantity and quality of food web data ## Comparing our study with other studies of predicting food webs using incomplete data
 
-**OP: Focus on this.## What is the generalisability of our results?
+Some studies have presented how the accuracy of food web prediction change when we vary the amount of food web data [@grayJoiningDotsAutomated2015]. 
+\*\*AG: Working on this paragraph.
 
--   Dependent on how size structured a food web is, how the food web is aggregated, the type of interactions
+## What is the generalisability of our results?
 
-<!-- The model correctly predicted a greater proportion of links when the trophic interactions were more strongly dependent on size [@petcheySizeForagingFood2008]. Indeed, constructing a food web based only on body size (i.e. ignoring taxonomy) resulted in almost twice the number of correctly predicted links, i.e. 83%, in contrast to taxonomy [@woodwardChapterIndividualBasedFood2010]. The goodness of fit of the ADBM's predictions depends on the types of interactions in the food webs [@petcheySizeForagingFood2008], because some of the interactions are more size structured than other interactions. For instance, predacious and aquatic herbivore interations were predicted better than parasitoid and herbivory ones [@petcheySizeForagingFood2008]. -->
+\*\*OP: Focus on this.
 
-**OP: I suggest to put this in the Methods section, where the general method should also be described (a bit like I suggest at the end of the Introduction. ## Assumption that the food web constructed with the total gut content data is the true food web and how can this be improved
+In our study, we have implemented the approach to only the ADBM. However, in principle, this approach could be extended to other food web models. A future prospect could be to study how good different food web models' prediction accuracy vary for different amount of gut content data. This can also help in making decision as to which food web model to chose from given set of gut content data.
 
-Our study is based on the assumption that the food web constructed using the complete gut content data is the true food web. However, it might not be the case as the links are still under-sampled for many nodes [@woodwardIndividualBasedFoodWebs2010]. This could result in a lower TSS of the predicted food web from the model which can lead to a higher upper limit on the amount of gut content data.
+A future study could be to use our approach of estimating the minimum gut content data for different food web models. An efficient model would be the one that uses minimum available gut content data to predict species interactions with high accuracy and high precision.
 
-## Limitation of the model
 
-The maximum predictive power of a model is constrained by the rules it is based on.
+## Assumption that the food web constructed with the total gut content data is the true food web and how can this be improved
 
-**OP: Focus on this ## How can we include other food web data type?
+Some of the food webs are not very well predicted using the ADBM. And with the assumption that the food web constructed from the complete gut content data is the true food web might result in not so accurate estimates of the minimum gut content data. As it might be the case that the links are still under-sampled for many nodes [@woodwardIndividualBasedFoodWebs2010].
 
-A future prospect would be to include other types of food web data
 
--   experimentation (feeding trials)
+## How can we include other types of food web data?
 
--   DNA Metabarcoding
+\*\*OP: Focus on this ## How can we include other food web data type?
 
-## Extending the approach to other food web models
+A future prospect would be to include other types of food web data along with gut content simultaneously to parameterise the ADBM. For example, one could use the approximate trophic position inferred from stable isotope ratio data from a tissue of an individual and gut content data of a different predator simultaneously to parameterise the ADBM. In this case, trophic position would be an additional summary statistics required in the parameterisation method. This is useful when only limited amount of diet information can be extracted by using a single method.
 
--   Current approach could be implemented with other food web models
-
-<!-- We have used rejection ABC to make use of incomplete gut content data to parameterise the ADBM. In theory, the ADBM could be replaced with any other food web models that predicts presence and absence interactions. -->
 
 # Conclusion
+
+\*\*OP: Working on this.
 
 # Supplementary Information
 
@@ -271,7 +323,7 @@ A future prospect would be to include other types of food web data
 
 ## Gut content data simulation
 
-**OP: It needs to be very clear in the main text, and here, why this is being described. It is currently unclear, not least because the main text does not, I think, refer to the information here.
+\*\*OP: It needs to be very clear in the main text, and here, why this is being described. It is currently unclear, not least because the main text does not, I think, refer to the information here.
 
 We simulated a food web using the ADBM for a given set of parameters. For a given set of predators, we subset the diet from the simulated food web. Then using a probability mass function (distribution), we sampled the gut content data from predators' diet thereby incorporating the uncertainty in the gut content data. We repeated this process multiple number of times for every predator in the food web.
 
