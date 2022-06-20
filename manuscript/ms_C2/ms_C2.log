@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.19)  15 NOV 2021 09:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.19)  3 JUN 2022 14:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -258,10 +258,7 @@ LaTeX Info: Redefining \lslig on input line 913.
 Package microtype Info: Loading configuration file microtype.cfg.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2018/01/14 v2.7a microtype main configuration file (RS)
-)) (/usr/local/texlive/2018/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count107
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 (/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
@@ -277,32 +274,33 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen129
 \Gin@req@width=\dimen130
 )
-\csllabelwidth=\skip59
-\cslhangindent=\skip60
+\cslhangindent=\skip59
+\csllabelwidth=\skip60
+\cslentryspacingunit=\skip61
 (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count108
-\calc@Bcount=\count109
+\calc@Acount=\count107
+\calc@Bcount=\count108
 \calc@Adimen=\dimen131
 \calc@Bdimen=\dimen132
-\calc@Askip=\skip61
-\calc@Bskip=\skip62
+\calc@Askip=\skip62
+\calc@Bskip=\skip63
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count110
-\calc@Cskip=\skip63
+\calc@Ccount=\count109
+\calc@Cskip=\skip64
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count111
+\linenopenalty=\count110
 \output=\toks20
-\linenoprevgraf=\count112
+\linenoprevgraf=\count111
 \linenumbersep=\dimen133
 \linenumberwidth=\dimen134
-\c@linenumber=\count113
-\c@pagewiselinenumber=\count114
-\c@LN@truepage=\count115
-\c@internallinenumber=\count116
-\c@internallinenumbers=\count117
+\c@linenumber=\count112
+\c@pagewiselinenumber=\count113
+\c@LN@truepage=\count114
+\c@internallinenumber=\count115
+\c@internallinenumbers=\count116
 \quotelinenumbersep=\dimen135
 \bframerule=\dimen136
 \bframesep=\dimen137
@@ -310,7 +308,7 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 LaTeX Info: Redefining \\ on input line 3056.
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip64
+\@mathmargin=\skip65
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
@@ -324,13 +322,13 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count118
+\inf@bad=\count117
 LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count119
-\leftroot@=\count120
+\uproot@=\count118
+\leftroot@=\count119
 LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count121
-\DOTSCASE@=\count122
+\classnum@=\count120
+\DOTSCASE@=\count121
 LaTeX Info: Redefining \ldots on input line 472.
 LaTeX Info: Redefining \dots on input line 475.
 LaTeX Info: Redefining \cdots on input line 596.
@@ -339,15 +337,15 @@ LaTeX Info: Redefining \cdots on input line 596.
 \big@size=\dimen140
 LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count123
-\c@MaxMatrixCols=\count124
+\macc@depth=\count122
+\c@MaxMatrixCols=\count123
 \dotsspace@=\muskip11
-\c@parentequation=\count125
-\dspbrk@lvl=\count126
+\c@parentequation=\count124
+\dspbrk@lvl=\count125
 \tag@help=\toks22
-\row@=\count127
-\column@=\count128
-\maxfields@=\count129
+\row@=\count126
+\column@=\count127
+\maxfields@=\count128
 \andhelp@=\toks23
 \eqnshift@=\dimen141
 \alignsep@=\dimen142
@@ -356,8 +354,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen145
 \lineht@=\dimen146
 \@envbody=\toks24
-\multlinegap=\skip65
-\multlinetaggap=\skip66
+\multlinegap=\skip66
+\multlinetaggap=\skip67
 \mathdisplay@stack=\toks25
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -365,35 +363,26 @@ LaTeX Info: Redefining \] on input line 2818.
 Package: setspace 2011/12/19 v6.7a set line spacing
 ) (./ms_C2.aux
 
-LaTeX Warning: Label `fig:fig_r0' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig_r3' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig_r31' multiply defined.
-
-
-LaTeX Warning: Label `fig:fig_r32' multiply defined.
+LaTeX Warning: Label `fig:fig_ra' multiply defined.
 
 )
 \openout1 = `ms_C2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
-LaTeX Font Info:    ... okay on input line 79.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 79.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 90.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -464,22 +453,22 @@ File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 79.
+Package hyperref Info: Link coloring OFF on input line 90.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count129
 )
-LaTeX Info: Redefining \ref on input line 79.
-LaTeX Info: Redefining \pageref on input line 79.
-LaTeX Info: Redefining \nameref on input line 79.
+LaTeX Info: Redefining \ref on input line 90.
+LaTeX Info: Redefining \pageref on input line 90.
+LaTeX Info: Redefining \nameref on input line 90.
 (./ms_C2.out) (./ms_C2.out)
 \@outlinefile=\write3
 \openout3 = `ms_C2.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 79.
+LaTeX Info: Redefining \microtypecontext on input line 90.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -494,16 +483,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count131
+\scratchcounter=\count130
 \scratchdimen=\dimen147
 \scratchbox=\box30
-\nofMPsegments=\count132
-\nofMParguments=\count133
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count134
+\MPscratchCnt=\count133
 \MPscratchDim=\dimen148
-\MPnumerator=\count135
-\makeMPintoPDFobject=\count136
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -526,43 +515,43 @@ Package microtype Info: Character `029' is missing
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 81.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 81.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 81.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 92.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 81.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 92.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 81.
+(Font)              <10> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 81.
+(Font)              <7> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 81.
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+(Font)              <5> on input line 92.
+LaTeX Font Info:    Try loading font information for U+msa on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 81.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 92.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -571,154 +560,112 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 81.
+(Font)              <9> on input line 92.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 81.
+(Font)              <6> on input line 92.
 
 LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
-(Font)              using `T1/lmr/bx/n' instead on input line 85.
+(Font)              using `T1/lmr/bx/n' instead on input line 94.
 
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 91.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmss' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 111.
+[1
+
+
+{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[4] [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[6]
+<../../manuscript/fig/ms_C2(1).png, id=176, 439.4016pt x 347.6187pt>
+File: ../../manuscript/fig/ms_C2(1).png Graphic file (type png)
+<use ../../manuscript/fig/ms_C2(1).png>
+Package pdftex.def Info: ../../manuscript/fig/ms_C2(1).png  used on input line 
+451.
+(pdftex.def)             Requested size: 501.87683pt x 397.06384pt.
+
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 451--452
+ [][] 
+ []
+
+
+Underfull \vbox (badness 1325) has occurred while \output is active []
+
+[7] [8 <../../manuscript/fig/ms_C2(1).png>]
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 472.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 111.
-[1
-
-
-{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[2] [3]
-Underfull \vbox (badness 1584) has occurred while \output is active []
-
-[4] [5]
-<../../results/misc/plot_TSS_ratio.png, id=201, 3613.5pt x 2710.125pt>
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 472.
+[9]
+<../../results/misc/plot_TSS_ratio.png, id=200, 3613.5pt x 2710.125pt>
 File: ../../results/misc/plot_TSS_ratio.png Graphic file (type png)
 <use ../../results/misc/plot_TSS_ratio.png>
 Package pdftex.def Info: ../../results/misc/plot_TSS_ratio.png  used on input l
-ine 399.
+ine 563.
 (pdftex.def)             Requested size: 501.87683pt x 376.39613pt.
 
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 399--400
+Overfull \hbox (32.12184pt too wide) in paragraph at lines 563--564
  [][] 
  []
 
-[6] [7 <../../results/misc/plot_TSS_ratio.png>]
-<../../results/misc/plot_min_gut_vs_X.png, id=229, 4065.1875pt x 2710.125pt>
+[10 <../../results/misc/plot_TSS_ratio.png>]
+<../../results/misc/plot_min_gut_vs_X.png, id=215, 3011.25pt x 1806.75pt>
 File: ../../results/misc/plot_min_gut_vs_X.png Graphic file (type png)
 <use ../../results/misc/plot_min_gut_vs_X.png>
 Package pdftex.def Info: ../../results/misc/plot_min_gut_vs_X.png  used on inpu
-t line 452.
-(pdftex.def)             Requested size: 501.87683pt x 334.54678pt.
-
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 452--453
- [][] 
- []
-
-<../../results/misc/plot_empTSS_ngut.png, id=230, 2710.125pt x 1806.75pt>
-File: ../../results/misc/plot_empTSS_ngut.png Graphic file (type png)
-<use ../../results/misc/plot_empTSS_ngut.png>
-Package pdftex.def Info: ../../results/misc/plot_empTSS_ngut.png  used on input
- line 461.
-(pdftex.def)             Requested size: 501.87683pt x 334.57434pt.
-
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 461--462
- [][] 
- []
-
+t line 614.
+(pdftex.def)             Requested size: 401.50146pt x 240.89574pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[8 <../../results/misc/plot_min_gut_vs_X.png>] [9 <../../results/misc/plot_empT
-SS_ngut.png>]
-Underfull \vbox (badness 1622) has occurred while \output is active []
-
-[10]
-<../fig/TSS_with_n_pred_prop_simulated.png, id=260, 4516.875pt x 3011.25pt>
-File: ../fig/TSS_with_n_pred_prop_simulated.png Graphic file (type png)
-<use ../fig/TSS_with_n_pred_prop_simulated.png>
-Package pdftex.def Info: ../fig/TSS_with_n_pred_prop_simulated.png  used on inp
-ut line 640.
-(pdftex.def)             Requested size: 401.50146pt x 267.6466pt.
 [11]
-<../fig/TSS_with_n_pred_prop.png, id=270, 4516.875pt x 3011.25pt>
-File: ../fig/TSS_with_n_pred_prop.png Graphic file (type png)
-<use ../fig/TSS_with_n_pred_prop.png>
-Package pdftex.def Info: ../fig/TSS_with_n_pred_prop.png  used on input line 67
-3.
-(pdftex.def)             Requested size: 301.1261pt x 200.74644pt.
-<../../results/misc/TSS_model_vs_data.png, id=271, 3312.375pt x 1204.5pt>
-File: ../../results/misc/TSS_model_vs_data.png Graphic file (type png)
-<use ../../results/misc/TSS_model_vs_data.png>
-Package pdftex.def Info: ../../results/misc/TSS_model_vs_data.png  used on inpu
-t line 682.
-(pdftex.def)             Requested size: 501.87683pt x 182.48674pt.
-
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 682--683
- [][] 
- []
-
-<../../results/misc/mse_model_vs_data.png, id=272, 3312.375pt x 1204.5pt>
-File: ../../results/misc/mse_model_vs_data.png Graphic file (type png)
-<use ../../results/misc/mse_model_vs_data.png>
-Package pdftex.def Info: ../../results/misc/mse_model_vs_data.png  used on inpu
-t line 691.
-(pdftex.def)             Requested size: 501.87683pt x 182.48674pt.
-
-Overfull \hbox (32.12184pt too wide) in paragraph at lines 691--692
- [][] 
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[12 <../fig/TSS_with_n_pred_prop_simulated.png>] [13 <../fig/TSS_with_n_pred_pr
-op.png> <../../results/misc/TSS_model_vs_data.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-[14 <../../results/misc/mse_model_vs_data.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[12 <../../results/misc/plot_min_gut_vs_X.png>] [13] [14]
+Underfull \vbox (badness 6725) has occurred while \output is active []
 
 [15]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 [16]
-No file ms_C2.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 937.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 [17]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 937.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[18]
+No file ms_C2.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1149.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1149.
 (./ms_C2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 937.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 937.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1149.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1149.
+
 Package rerunfilecheck Info: File `ms_C2.out' has not changed.
-(rerunfilecheck)             Checksum: 1B0674D1F854A2F5403855F8475E1E5D;2724.
+(rerunfilecheck)             Checksum: 6B013B9145768EF357C42FAF52D2D515;2546.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 937.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1149.
  ) 
 Here is how much of TeX's memory you used:
- 9239 strings out of 492649
- 142863 string characters out of 6129622
- 371301 words of memory out of 5000000
- 12680 multiletter control sequences out of 15000+600000
- 74927 words of font info for 121 fonts, out of 8000000 for 9000
+ 8994 strings out of 492649
+ 139609 string characters out of 6129622
+ 268367 words of memory out of 5000000
+ 12430 multiletter control sequences out of 15000+600000
+ 69677 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,10n,45p,764b,462s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 31i,11n,45p,765b,485s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/lo
 cal/texlive/2018/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/20
 18/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2018/texmf-dist/
@@ -733,15 +680,14 @@ onts/type1/public/lm/lmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/
 public/lm/lmr5.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lm
 r7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr
 /local/texlive/2018/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/tex
-live/2018/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2018/t
-exmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/texmf-dist/
-fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
-/public/lm/lmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/lm/
-lmtt10.pfb>
-Output written on ms_C2.pdf (17 pages, 2402719 bytes).
+live/2018/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/2018/
+texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/local/texlive/2018/texmf-dist/
+fonts/type1/public/lm/lmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1
+/public/lm/lmtt10.pfb>
+Output written on ms_C2.pdf (19 pages, 903332 bytes).
 PDF statistics:
- 492 PDF objects out of 1000 (max. 8388607)
- 437 compressed objects within 5 object streams
- 134 named destinations out of 1000 (max. 500000)
- 21300 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 497 PDF objects out of 1000 (max. 8388607)
+ 449 compressed objects within 5 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 20216 words of extra memory for PDF output out of 20736 (max. 10000000)
 

@@ -1,8 +1,8 @@
 #Rule ind
 #We plot TSS with number of predator diets sampled
 
-## "Broadstone Stream size_agg_v2"
-fw_name <- "sim_best_Broadstone Stream size_agg_v2"
+## "Broadstone Stream size_agg_v2" ####
+fw_name <- "Broadstone Stream species_agg_v2"
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and rand
 n_gut_sample <- 100  
@@ -69,7 +69,7 @@ min_gut_bs <- df_min_gut_vs_S$n_min_gut[which(df_min_gut_vs_S$foodweb == "Broads
   
 tsize <- 30
 dd_plot_broadstone_stream <- ggplot(dd_bs) +
-  geom_vline(xintercept = min_gut_bs, color = "red") +
+  # geom_vline(xintercept = min_gut_bs, color = "red") +
   # geom_line(aes(x = propn, y = mean_acc)) +
   # geom_rect(aes(xmin = 0, xmax = 312, ymin = -Inf, ymax = Inf), alpha = 0.01, fill = "red", color = "red") +
   geom_line(aes(x = propn, y = mean_acc), 
@@ -204,8 +204,8 @@ dd_plot_celtic_sea_FPR <- ggplot(dd_cs) +
 
 
 
-## Tadnoll Brook size_agg
-fw_name <- "Tadnoll Brook size_agg"
+## Tadnoll Brook size_agg ####
+fw_name <- "Tadnoll Brook species_agg"
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and rand
 n_gut_sample <- 100  
@@ -263,12 +263,12 @@ dd_tb <- data.frame(l_acc = l_acc, r_acc = r_acc, mean_acc = mean_acc,
                     l_FPR = l_FPR, r_FPR = r_FPR, mean_FPR = mean_FPR,
                     propn = propn)
 
-# saveRDS(object = dd_tb, file = "../../../../../Volumes/SSD1/Secondary_storage/PhD_local/C2_files/Tadnoll Brook size_agg/rule_ind_predator/dd_tb.Rdata")
+# saveRDS(object = dd_tb, file = paste0("../../../../../Volumes/SSD1/Secondary_storage/PhD_local/C2_files/", fw_name, "/rule_ind_predator/dd_tb.Rdata"))
 
 min_gut_tb <- df_min_gut_vs_S$n_min_gut[which(df_min_gut_vs_S$foodweb == "Tadnoll Brook")]
 
 dd_plot_Tadnoll_Brook <- ggplot(dd_tb) +
-  geom_vline(xintercept = min_gut_tb, color = "red") +
+  # geom_vline(xintercept = min_gut_tb, color = "red") +
   # geom_line(aes(x = propn, y = mean_acc)) +
   # geom_rect(aes(xmin = 0, xmax = 172, ymin = -Inf, ymax = Inf), alpha = 0.025, fill = "red", color = "red") +
   geom_line(aes(x = propn, y = mean_acc), 
@@ -398,8 +398,8 @@ plot_TSS_ngut <- ggarrange(dd_plot_broadstone_stream, dd_plot_celtic_sea,
 
 
 
-## "Coilaco size_agg"
-fw_name <- "Coilaco size_agg"
+## "Coilaco size_agg" ####
+fw_name <- "Coilaco species_agg"
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and rand
 n_gut_sample <- 100  
@@ -500,8 +500,8 @@ dd_plot_Coilaco_FPR <- ggplot(dd_co) +
 
 
 
-## "Guampoe size_agg"
-fw_name <- "Guampoe size_agg"
+## "Guampoe size_agg" ####
+fw_name <- "Guampoe species_agg"
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and rand
 n_gut_sample <- 100  

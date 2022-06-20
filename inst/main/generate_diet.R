@@ -22,7 +22,7 @@ for(i in 1:n_species){
 
 #We sample k number of distinct predator guts from n number of predators gut
 
-fw_name <- "Trancura size_agg"
+fw_name <- "Trancura species_agg"
 rule <- "ind_predator"
 fname <- paste("data/gut_data/",fw_name,"_",rule,".gut.Rdata", sep = "")
 gut_mat <- readRDS(fname)

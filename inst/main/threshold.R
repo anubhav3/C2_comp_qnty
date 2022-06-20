@@ -242,6 +242,9 @@ df_min_gut_vs_S <- rbind(df_min_gut_vs_S,
 
 
 # saveRDS(object = df_min_gut_vs_S, file = "results/misc/df_min_gut_vs_S.RDS")
+
+df_min_gut_vs_S <- readRDS("results/misc/df_min_gut_vs_S.RDS")
+
 ###############################
 
 
@@ -251,6 +254,66 @@ plot_n_min_gut_vs_S <- ggplot(df_min_gut_vs_S) +
   scale_color_discrete(name = "Food web") +
   xlab("Number of species (S)") +
   ylab("Number of minimum gut")
+
+df_min_gut_vs_S <- df_min_gut_vs_S %>%
+  mutate(S_sq = S^2)
+
+library(latex2exp)
+
+ggplot(df_min_gut_vs_S) +
+  geom_point(aes(x = S_sq, y = n_min_gut), size = 5) +
+  theme_classic() +
+  scale_color_discrete(name = "Food web") +
+  xlab(TeX("$(Number~of~species)^2$")) +
+  ylab("Minimum number of predator guts") +
+  scale_y_continuous(breaks = as.integer(seq(1, 400, length = 5))) +
+  # scale_x_continuous(breaks = as.integer(seq(25, 65, length = 3))) +
+  theme(text = element_text(size = 20), plot.title=element_text(hjust=0.5, size = 40, vjust = 3.5),
+        axis.title.y = element_text(margin = margin(r = 10)),
+        axis.title.x = element_text(margin = margin(t = 10)),
+        plot.margin  = margin(t = 25, l = 10, b = 10)) +
+  coord_cartesian(ylim = c(1, 400))
+
+# ggsave(filename = "results/misc/plot_n_min_gut_vs_S_sq.png", dpi = 500)
+
+#### Black background ####
+
+df_min_gut_vs_S <- df_min_gut_vs_S %>%
+  mutate(S_sq = S^2)
+  
+library(latex2exp)
+
+ggplot(df_min_gut_vs_S) +
+  geom_point(aes(x = S_sq, y = n_min_gut), color = "white", size = 5) +
+  theme_classic() +
+  scale_color_discrete(name = "Food web") +
+  xlab(TeX("$(Number~of~species)^2$")) +
+  ylab("Number of minimum predator gut") +
+  scale_y_continuous(breaks = as.integer(seq(1, 400, length = 5))) +
+  # scale_x_continuous(breaks = as.integer(seq(25, 65, length = 3))) +
+  theme(text = element_text(size = 20, face = "bold", color = "white"), plot.title=element_text(hjust=0.5, size = 40, vjust = 3.5),
+        panel.background = element_rect(fill = "black", colour = "black"),
+        plot.background = element_rect(fill = "black", colour = "black"),
+        axis.line = element_line(color  = "white"),
+        axis.ticks = element_line(colour = "white"),
+        axis.text = element_text(colour = "white"),
+        axis.title.y = element_text(margin = margin(r = 10)),
+        axis.title.x = element_text(margin = margin(t = 10)),
+        plot.margin  = margin(t = 25, l = 10, b = 10),
+        legend.background = element_rect(fill = "black", colour = "black")) +
+  coord_cartesian(ylim = c(1, 400))
+  
+# ggsave(filename = "results/misc/plot_n_min_gut_vs_S_sq_black.png")
+
+
+
+lm_ng_S <- 
+  df_min_gut_vs_S %>%
+  filter(foodweb != "Broadstone Stream") %>%
+  lm(formula = n_min_gut ~ S)
+
+summary(lm_ng_S)
+anova(lm_ng_S)
 
 # ggsave(plot = plot_n_min_gut_vs_S, filename = "inst/report/fig_2021_10_15/plot_n_min_gut_vs_S.png")
 

@@ -2,11 +2,11 @@
 
 # We consider the best estimates of predicted food web using gut content data
 
-fw_name <- "Tadnoll Brook size_agg"
+fw_name <- "Trancura size_agg"
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and rand
 n_gut_sample <- 100  
-propn <- c(seq(1, 688, 14), 688)
+propn <- seq(1, 47, by = 2)
 n_sel <- 1
 n <- length(propn)
 l_acc <- numeric(n)

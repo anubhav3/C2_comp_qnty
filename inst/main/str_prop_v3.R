@@ -12,8 +12,8 @@ library(bipartite)
 ## Relative path from the project directory
 sourceDirectory("R", modifiedOnly=FALSE)
 
-fw_name <- "Broadstone Stream size_agg_v2"
-propn <- c(seq(1, 1008, by = 20), 1008)
+fw_name <- "Coilaco size_agg"
+propn <- c(73, 74)
 
 dir_N <- 1e5
 dir_tol <- 2 #different for ind and lbs and ubs
@@ -28,7 +28,7 @@ fw_data <- readRDS(fname_data)
 model_core_par <- ADBM_core_par(fw_data)
 
 par_accepted <- readRDS(paste("../../../../../Volumes/SSD1/Secondary_storage/PhD_local/C2_files/", fw_name, "/rule_", rule, 
-                              "/accepted_ones/accepted_par.Rdata",
+                              "/accepted_par/accepted_par.Rdata",
                               sep = ""))
 
 n_cores <- 4
@@ -58,7 +58,7 @@ foreach(k = 1:n_cores) %dopar%
       calc_prop <- fw_prop_predator(foodweb = prop_acc_accepted, other = model_core_par, all.web.info = fw_data)
       
       fname_prop <- paste0("../../../../../Volumes/SSD1/Secondary_storage/PhD_local/C2_files/", fw_name, "/rule_", rule, 
-                           "/accepted_ones/properties/", "/", fw_name,"_n_diet=", i, "_properties.Rdata")
+                           "/accepted_par/properties/", "/", fw_name,"_n_diet=", i, "_properties.Rdata")
       saveRDS(object = calc_prop, file = fname_prop)
       print(i)
     }

@@ -23,7 +23,7 @@ dd_plot_broadstone_stream <- ggplot(dd_bs) +
   ylab("True skill statistic") +
   theme_classic() +
   scale_color_manual(name = "Gut content data", values = c("red", "blue")) +
-
+  scale_x_continuous(breaks = as.integer(seq(1, 1008, length = 5))) +
   labs(tag = "(a)") +
   theme(plot.tag = element_text(face = "bold")) 
 
